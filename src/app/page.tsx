@@ -105,22 +105,28 @@ const whyPoints = [
 
 const featuredBuilds = [
   {
-    name: 'Starter Contractor Trailer',
+    name: 'Starter Contractor Trailer Build',
     spec: '4 GPM / 4,000 PSI',
-    description: 'Single gun setup perfect for residential jobs. Everything you need to start booking work.',
-    price: 'From $3,500',
+    tag: 'Starter',
+    description:
+      'Job-ready contractor starter package with two Coxreels, garden hose reel, 35-gal chem tank, 18" surface cleaner, and downstream injector.',
+    price: 'Starting at $6,000',
   },
   {
-    name: 'Dual Gun Commercial Rig',
-    spec: '5.5 GPM / 3,500 PSI',
-    description: 'Run two guns simultaneously. Built for contractors doing multiple jobs per day.',
-    price: 'From $5,800',
+    name: 'Entry Level Commercial Rig',
+    spec: '4.4 GPM / 3,600 PSI (Gear-Driven)',
+    tag: 'Commercial',
+    description:
+      'Everything in the Starter plus a gear-driven machine upgrade, more intricate welding, and 65 or 125-gal buffer tank support.',
+    price: 'Starting at $8,500',
   },
   {
-    name: 'Premium 8 GPM Build',
-    spec: '8 GPM / 3,500 PSI',
-    description: 'High-volume machine for heavy commercial work, fleet washing, or multi-crew operations.',
-    price: 'From $8,500',
+    name: 'Max Mayhem Build',
+    spec: '9.2 GPM / 3,600 PSI',
+    tag: 'Premium',
+    description:
+      '6.4×14 tandem trailer, 12V soft wash system, 225 or 325-gal buffer tank, aluminum fuel cell, and full custom welding. Built for serious output.',
+    price: 'Starting at $14,000',
   },
 ]
 
@@ -158,7 +164,7 @@ export default function HomePage() {
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors text-sm"
               >
-                Request a Build Quote
+                Request a Trailer Build Quote
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -230,7 +236,7 @@ export default function HomePage() {
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
               >
-                Contact Max
+                Talk With Max
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -282,32 +288,35 @@ export default function HomePage() {
             {featuredBuilds.map((build) => (
               <div
                 key={build.name}
-                className="bg-slate-800 border border-slate-700/50 rounded-xl overflow-hidden"
+                className="bg-slate-800 border border-slate-700/50 rounded-xl overflow-hidden flex flex-col"
               >
                 <div
-                  className="h-40 bg-slate-700 flex items-center justify-center"
+                  className="h-36 bg-slate-700 flex items-center justify-center relative"
                   style={{
                     backgroundImage:
                       'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.02) 10px, rgba(255,255,255,0.02) 20px)',
                   }}
                 >
-                  <svg className="w-16 h-16 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-14 h-14 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7h8" />
                   </svg>
+                  <div className="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                    {build.tag}
+                  </div>
                 </div>
-                <div className="p-6">
-                  <div className="inline-block bg-blue-600/10 border border-blue-500/20 rounded-full px-3 py-1 text-blue-400 text-xs font-medium mb-3">
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="inline-block bg-slate-700 text-slate-300 text-xs px-2.5 py-1 rounded-full font-mono mb-3 self-start">
                     {build.spec}
                   </div>
-                  <h3 className="text-white font-bold text-lg mb-2">{build.name}</h3>
-                  <p className="text-slate-400 text-sm mb-4 leading-relaxed">{build.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-white font-semibold">{build.price}</span>
+                  <h3 className="text-white font-bold text-base mb-2">{build.name}</h3>
+                  <p className="text-slate-400 text-sm mb-5 leading-relaxed flex-1">{build.description}</p>
+                  <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
+                    <span className="text-white font-bold">{build.price}</span>
                     <Link
                       href="/contact"
                       className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
                     >
-                      Get a quote →
+                      Start my build →
                     </Link>
                   </div>
                 </div>
@@ -321,18 +330,18 @@ export default function HomePage() {
       <section className="bg-blue-700 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Build Your Setup?
+            Ready to Start Your Build?
           </h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-            Tell us what you need and we'll help you put together the right package for your
-            business.
+            Three packages starting at $6,000. Tell us which build fits your business and we'll
+            send you a custom quote.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 bg-white text-blue-700 hover:bg-blue-50 font-bold px-7 py-3.5 rounded-lg transition-colors text-sm"
             >
-              Request a Build Quote
+              Request a Trailer Build Quote
             </Link>
             <Link
               href="/trailer-builds"

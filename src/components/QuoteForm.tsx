@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { useActionState } from 'react'
 import { submitQuote, type QuoteFormState } from '@/app/actions'
 
@@ -14,13 +15,35 @@ const lookingForOptions = [
   'Other',
 ]
 
+const trailerPackageOptions = [
+  'Starter Contractor Trailer Build – Starting at $6,000',
+  'Entry Level Commercial Rig – Starting at $8,500',
+  'Max Mayhem Build (Premium) – Starting at $14,000',
+  'Not sure yet — help me pick',
+]
+
+const bufferTankOptions = [
+  '65 gallon (Entry Level Commercial)',
+  '125 gallon (Entry Level Commercial)',
+  '225 gallon (Max Mayhem)',
+  '325 gallon (Max Mayhem)',
+  'Not sure yet',
+]
+
+const stainColorOptions = [
+  'Regular / Normal',
+  'Blue',
+  'Black',
+  'Red',
+  'Undecided',
+]
+
 const budgetOptions = [
-  'Under $500',
-  '$500 – $2,000',
-  '$2,000 – $5,000',
-  '$5,000 – $10,000',
-  '$10,000+',
-  "Not sure yet",
+  'Under $5,000',
+  '$5,000 – $8,500',
+  '$8,500 – $14,000',
+  '$14,000+',
+  'Not sure yet',
 ]
 
 const timelineOptions = [
@@ -42,8 +65,32 @@ function SubmitButton({ pending }: { pending: boolean }) {
   )
 }
 
+function SelectWrapper({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="relative">
+      {children}
+      <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
+        <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+    </div>
+  )
+}
+
 export default function QuoteForm() {
   const [state, formAction, isPending] = useActionState(submitQuote, initialState)
+  const [lookingFor, setLookingFor] = useState('')
+
+  const isTrailerBuild = lookingFor === 'Custom Trailer Build'
+
+  const inputClass =
+    'w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm placeholder:text-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors'
+
+  const selectClass =
+    'w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors appearance-none'
+
+  const labelClass = 'block text-slate-300 text-sm font-medium mb-1.5'
 
   if (state?.success) {
     return (
@@ -58,14 +105,6 @@ export default function QuoteForm() {
       </div>
     )
   }
-
-  const inputClass =
-    'w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm placeholder:text-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors'
-
-  const selectClass =
-    'w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors appearance-none'
-
-  const labelClass = 'block text-slate-300 text-sm font-medium mb-1.5'
 
   return (
     <form action={formAction} className="space-y-5">
@@ -122,8 +161,15 @@ export default function QuoteForm() {
         <label htmlFor="lookingFor" className={labelClass}>
           What are you looking for? <span className="text-blue-400">*</span>
         </label>
-        <div className="relative">
-          <select id="lookingFor" name="lookingFor" required className={selectClass} defaultValue="">
+        <SelectWrapper>
+          <select
+            id="lookingFor"
+            name="lookingFor"
+            required
+            className={selectClass}
+            defaultValue=""
+            onChange={(e) => setLookingFor(e.target.value)}
+          >
             <option value="" disabled>
               Select an option…
             </option>
@@ -133,20 +179,96 @@ export default function QuoteForm() {
               </option>
             ))}
           </select>
-          <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
-            <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
+        </SelectWrapper>
+      </div>
+
+      {/* Trailer Build — Conditional Fields */}
+      {isTrailerBuild && (
+        <div className="space-y-5 bg-blue-950/30 border border-blue-500/20 rounded-xl p-5">
+          <p className="text-blue-400 text-xs font-semibold uppercase tracking-wider">
+            Trailer Build Details
+          </p>
+
+          <div>
+            <label htmlFor="trailerPackage" className={labelClass}>
+              Preferred Package
+            </label>
+            <SelectWrapper>
+              <select
+                id="trailerPackage"
+                name="trailerPackage"
+                className={selectClass}
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select a package…
+                </option>
+                {trailerPackageOptions.map((opt) => (
+                  <option key={opt} value={opt}>
+                    {opt}
+                  </option>
+                ))}
+              </select>
+            </SelectWrapper>
+          </div>
+
+          <div>
+            <label htmlFor="bufferTank" className={labelClass}>
+              Buffer Tank Size Preference
+            </label>
+            <SelectWrapper>
+              <select
+                id="bufferTank"
+                name="bufferTank"
+                className={selectClass}
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select tank size…
+                </option>
+                {bufferTankOptions.map((opt) => (
+                  <option key={opt} value={opt}>
+                    {opt}
+                  </option>
+                ))}
+              </select>
+            </SelectWrapper>
+          </div>
+
+          <div>
+            <label htmlFor="stainColor" className={labelClass}>
+              Trailer Wood Stain / Seal Color
+            </label>
+            <SelectWrapper>
+              <select
+                id="stainColor"
+                name="stainColor"
+                className={selectClass}
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select a color…
+                </option>
+                {stainColorOptions.map((opt) => (
+                  <option key={opt} value={opt}>
+                    {opt}
+                  </option>
+                ))}
+              </select>
+            </SelectWrapper>
+            <p className="text-slate-500 text-xs mt-1.5">
+              Color can be changed at time of build if you&apos;re undecided.
+            </p>
           </div>
         </div>
-      </div>
+      )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label htmlFor="budget" className={labelClass}>
             Budget Range
           </label>
-          <div className="relative">
+          <SelectWrapper>
             <select id="budget" name="budget" className={selectClass} defaultValue="">
               <option value="" disabled>
                 Select budget…
@@ -157,18 +279,13 @@ export default function QuoteForm() {
                 </option>
               ))}
             </select>
-            <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
-              <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </div>
+          </SelectWrapper>
         </div>
         <div>
           <label htmlFor="timeline" className={labelClass}>
             Timeline
           </label>
-          <div className="relative">
+          <SelectWrapper>
             <select id="timeline" name="timeline" className={selectClass} defaultValue="">
               <option value="" disabled>
                 Select timeline…
@@ -179,12 +296,7 @@ export default function QuoteForm() {
                 </option>
               ))}
             </select>
-            <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
-              <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </div>
+          </SelectWrapper>
         </div>
       </div>
 
@@ -196,7 +308,11 @@ export default function QuoteForm() {
           id="message"
           name="message"
           rows={4}
-          placeholder="Describe your setup, what machines you run, what you're hauling, or any specific requirements…"
+          placeholder={
+            isTrailerBuild
+              ? 'Any additional details about your build — machine preferences, job types, custom requests…'
+              : 'Describe what you need, your current setup, or any specific requirements…'
+          }
           className={`${inputClass} resize-none`}
         />
       </div>
@@ -204,7 +320,8 @@ export default function QuoteForm() {
       <SubmitButton pending={isPending} />
 
       <p className="text-slate-500 text-xs text-center">
-        We typically respond within 1 business day.
+        We typically respond within 1 business day. All pricing is custom quoted based on your
+        options.
       </p>
     </form>
   )
