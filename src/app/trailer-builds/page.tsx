@@ -36,7 +36,8 @@ const stainColors = [
 
 const builds: Build[] = [
   {
-    name: 'Starter Contractor Trailer Build',
+    name: 'MaxLaunch Build',
+    subtitle: 'Starter Contractor Trailer Package',
     tag: 'Contractor Starter',
     tagColor: 'bg-slate-600',
     price: 'Starting at $6,000',
@@ -54,14 +55,15 @@ const builds: Build[] = [
     ],
   },
   {
-    name: 'Entry Level Commercial Rig',
+    name: 'MaxFlow Commercial Build',
+    subtitle: 'Entry Level Commercial Trailer Package',
     tag: 'Commercial',
     tagColor: 'bg-blue-600',
     price: 'Starting at $8,500',
     spec: '4.4 GPM / 3,600 PSI (Gear-Driven)',
     bufferOptions: ['65 gallon', '125 gallon'],
     description:
-      'Includes everything from the Starter package, plus a gear-driven machine upgrade, more intricate welding, an improved layout, and buffer tank support for contractors who want serious water supply and a more polished commercial rig.',
+      'Includes everything from the MaxLaunch package, plus a gear-driven machine upgrade, more intricate welding, an improved layout, and buffer tank support for contractors who want serious water supply and a more polished commercial rig.',
     includes: [
       'Everything in the Starter Contractor Build',
       'Gear-driven 4.4 GPM / 3,600 PSI machine',
@@ -76,7 +78,7 @@ const builds: Build[] = [
     ],
   },
   {
-    name: 'Max Mayhem Build',
+    name: 'MaxMayhem Build',
     subtitle: 'Premium Trailer Package',
     tag: 'Premium',
     tagColor: 'bg-blue-700',

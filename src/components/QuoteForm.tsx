@@ -16,9 +16,9 @@ const lookingForOptions = [
 ]
 
 const trailerPackageOptions = [
-  'Starter Contractor Trailer Build – Starting at $6,000',
-  'Entry Level Commercial Rig – Starting at $8,500',
-  'Max Mayhem Build (Premium) – Starting at $14,000',
+  'MaxLaunch Build – Starting at $6,000',
+  'MaxFlow Commercial Build – Starting at $8,500',
+  'MaxMayhem Build (Premium) – Starting at $14,000',
   'Not sure yet — help me pick',
 ]
 

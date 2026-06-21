@@ -105,23 +105,23 @@ const whyPoints = [
 
 const featuredBuilds = [
   {
-    name: 'Starter Contractor Trailer Build',
+    name: 'MaxLaunch Build',
     spec: '4 GPM / 4,000 PSI',
     tag: 'Starter',
     description:
-      'Job-ready contractor starter package with two Coxreels, garden hose reel, 35-gal chem tank, 18" surface cleaner, and downstream injector.',
+      'Starter contractor package with two Coxreels, garden hose reel, 35-gal chem tank, 18" surface cleaner, and downstream injector.',
     price: 'Starting at $6,000',
   },
   {
-    name: 'Entry Level Commercial Rig',
+    name: 'MaxFlow Commercial Build',
     spec: '4.4 GPM / 3,600 PSI (Gear-Driven)',
     tag: 'Commercial',
     description:
-      'Everything in the Starter plus a gear-driven machine upgrade, more intricate welding, and 65 or 125-gal buffer tank support.',
+      'Everything in the MaxLaunch plus a gear-driven machine upgrade, more intricate welding, and 65 or 125-gal buffer tank support.',
     price: 'Starting at $8,500',
   },
   {
-    name: 'Max Mayhem Build',
+    name: 'MaxMayhem Build',
     spec: '9.2 GPM / 3,600 PSI',
     tag: 'Premium',
     description:
