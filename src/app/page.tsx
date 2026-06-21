@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -33,7 +34,7 @@ const features = [
   {
     title: 'Surface Cleaners',
     description:
-      'Flat surface cleaners from 16" to 24" — built for driveways, parking lots, and commercial flatwork at commercial-grade psi.',
+      'Flat surface cleaners from 18" to 30" — built for driveways, parking lots, and commercial flatwork at commercial-grade psi.',
     href: '/surface-cleaners',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -49,7 +50,7 @@ const features = [
   {
     title: 'Spray Guns & Accessories',
     description:
-      'Pro-grade trigger guns, wands, foam cannons, and downstream injector kits rated for commercial pressure washer output.',
+      'Pro-grade trigger guns, soft wash guns, and full kits rated for commercial pressure washer output.',
     href: '/spray-guns',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +90,7 @@ const whyPoints = [
   {
     title: 'No Consumer-Grade Junk',
     description:
-      'Every product we carry is rated for commercial output. If it won\'t survive a full season of heavy use, we don\'t sell it.',
+      "Every product we carry is rated for commercial output. If it won't survive a full season of heavy use, we don't sell it.",
   },
   {
     title: 'Custom Builds Available',
@@ -99,7 +100,7 @@ const whyPoints = [
   {
     title: 'Fast Response',
     description:
-      'We\'re not a big box store. Send us a message and hear back from a real person who knows pressure washing.',
+      "We're not a big box store. Send us a message and hear back from a real person who knows pressure washing.",
   },
 ]
 
@@ -111,6 +112,7 @@ const featuredBuilds = [
     description:
       'Starter contractor package with two Coxreels, garden hose reel, 35-gal chem tank, 18" surface cleaner, and downstream injector.',
     price: 'Starting at $6,000',
+    image: null as string | null,
   },
   {
     name: 'MaxFlow Commercial Build',
@@ -119,6 +121,7 @@ const featuredBuilds = [
     description:
       'Everything in the MaxLaunch plus a gear-driven machine upgrade, more intricate welding, and 65 or 125-gal buffer tank support.',
     price: 'Starting at $8,500',
+    image: '/media/trailer-builds/MAXFLOW%20COMMERICAL%20BUILD.png',
   },
   {
     name: 'MaxMayhem Build',
@@ -127,6 +130,28 @@ const featuredBuilds = [
     description:
       '6.4×14 tandem trailer, 12V soft wash system, 225 or 325-gal buffer tank, aluminum fuel cell, and full custom welding. Built for serious output.',
     price: 'Starting at $14,000',
+    image: null as string | null,
+  },
+]
+
+const featuredProducts = [
+  {
+    name: 'Trailer Builds',
+    description: 'Starting at $6,000',
+    href: '/trailer-builds',
+    image: '/media/trailer-builds/MAXFLOW%20COMMERICAL%20BUILD.png',
+  },
+  {
+    name: 'Surface Cleaners',
+    description: 'From $250',
+    href: '/surface-cleaners',
+    image: '/media/surface-cleaners/18INCHSURFACECLEANER(MP3040).png',
+  },
+  {
+    name: 'Spray Guns',
+    description: 'From $45',
+    href: '/spray-guns',
+    image: '/media/spray-guns/BLUESOFTWASHGUN(MP2405).png',
   },
 ]
 
@@ -145,6 +170,18 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900 pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="max-w-3xl">
+            <div className="mb-6">
+              <div className="w-16 h-16 bg-white rounded-xl overflow-hidden">
+                <Image
+                  src="/media/logo/maxpressureequipmentlogo.jpeg"
+                  alt="Max Pressure Equipment"
+                  width={64}
+                  height={64}
+                  className="object-contain w-full h-full"
+                  priority
+                />
+              </div>
+            </div>
             <div className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-6">
               <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
               <span className="text-blue-400 text-xs font-medium tracking-wide uppercase">
@@ -157,7 +194,7 @@ export default function HomePage() {
             </h1>
             <p className="text-lg text-slate-300 leading-relaxed mb-8 max-w-2xl">
               Custom trailer builds, surface cleaners, spray guns, and equipment consulting —
-              built for contractors who won't settle for consumer-grade gear.
+              built for contractors who won&apos;t settle for consumer-grade gear.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -230,7 +267,7 @@ export default function HomePage() {
               <p className="text-slate-300 leading-relaxed mb-8">
                 Max Pressure Equipment is backed by Max Pressure Exterior Cleaning — we run a real
                 pressure washing business. We know what breaks, what holds up, and what setups
-                actually make you money. That's the difference.
+                actually make you money. That&apos;s the difference.
               </p>
               <Link
                 href="/contact"
@@ -262,8 +299,46 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Trailer Builds */}
+      {/* Featured Products */}
       <section className="bg-slate-900 py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-3">
+              Products
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Shop the Lineup</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {featuredProducts.map((product) => (
+              <Link
+                key={product.href}
+                href={product.href}
+                className="group relative bg-white rounded-xl overflow-hidden aspect-[4/3] block"
+              >
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-contain p-8 group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <h3 className="text-white font-bold text-lg leading-tight">{product.name}</h3>
+                  <div className="flex items-center justify-between mt-1">
+                    <span className="text-blue-300 text-sm">{product.description}</span>
+                    <span className="text-blue-400 text-sm font-medium group-hover:translate-x-1 transition-transform inline-block">
+                      Shop →
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Trailer Builds */}
+      <section className="bg-slate-950 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
             <div>
@@ -290,20 +365,34 @@ export default function HomePage() {
                 key={build.name}
                 className="bg-slate-800 border border-slate-700/50 rounded-xl overflow-hidden flex flex-col"
               >
-                <div
-                  className="h-36 bg-slate-700 flex items-center justify-center relative"
-                  style={{
-                    backgroundImage:
-                      'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.02) 10px, rgba(255,255,255,0.02) 20px)',
-                  }}
-                >
-                  <svg className="w-14 h-14 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7h8" />
-                  </svg>
-                  <div className="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">
-                    {build.tag}
+                {build.image ? (
+                  <div className="relative h-44 bg-white">
+                    <Image
+                      src={build.image}
+                      alt={build.name}
+                      fill
+                      className="object-contain p-4"
+                    />
+                    <div className="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                      {build.tag}
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <div
+                    className="h-44 bg-slate-700 flex items-center justify-center relative"
+                    style={{
+                      backgroundImage:
+                        'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.02) 10px, rgba(255,255,255,0.02) 20px)',
+                    }}
+                  >
+                    <svg className="w-14 h-14 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7h8" />
+                    </svg>
+                    <div className="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                      {build.tag}
+                    </div>
+                  </div>
+                )}
                 <div className="p-6 flex flex-col flex-1">
                   <div className="inline-block bg-slate-700 text-slate-300 text-xs px-2.5 py-1 rounded-full font-mono mb-3 self-start">
                     {build.spec}
@@ -333,7 +422,7 @@ export default function HomePage() {
             Ready to Start Your Build?
           </h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-            Three packages starting at $6,000. Tell us which build fits your business and we'll
+            Three packages starting at $6,000. Tell us which build fits your business and we&apos;ll
             send you a custom quote.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

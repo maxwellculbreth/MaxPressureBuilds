@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ type Build = {
   includes: string[]
   note?: string
   featured?: boolean
+  image?: string
 }
 
 const stainColors = [
@@ -62,6 +64,7 @@ const builds: Build[] = [
     price: 'Starting at $8,500',
     spec: '4.4 GPM / 3,600 PSI (Gear-Driven)',
     bufferOptions: ['65 gallon', '125 gallon'],
+    image: '/media/trailer-builds/MAXFLOW%20COMMERICAL%20BUILD.png',
     description:
       'Includes everything from the MaxLaunch package, plus a gear-driven machine upgrade, more intricate welding, an improved layout, and buffer tank support for contractors who want serious water supply and a more polished commercial rig.',
     includes: [
@@ -235,6 +238,16 @@ export default function TrailerBuildsPage() {
 
                 {/* Right: Colors + Note + CTA */}
                 <div>
+                  {build.image && (
+                    <div className="relative h-48 bg-white rounded-xl overflow-hidden mb-6">
+                      <Image
+                        src={build.image}
+                        alt={`${build.name} trailer`}
+                        fill
+                        className="object-contain p-3"
+                      />
+                    </div>
+                  )}
                   <p className="text-slate-500 text-xs uppercase font-semibold tracking-wider mb-3">
                     Trailer Wood Stain / Seal Color Options
                   </p>

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const products = [
   { href: '/trailer-builds', label: 'Trailer Builds' },
@@ -20,8 +21,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center shrink-0">
-                <span className="text-white font-black text-sm">MP</span>
+              <div className="w-10 h-10 bg-white rounded-lg overflow-hidden shrink-0">
+                <Image
+                  src="/media/logo/maxpressureequipmentlogo.jpeg"
+                  alt="Max Pressure Equipment"
+                  width={40}
+                  height={40}
+                  className="object-contain w-full h-full"
+                />
               </div>
               <div>
                 <div className="text-white font-bold text-sm leading-tight tracking-wide">

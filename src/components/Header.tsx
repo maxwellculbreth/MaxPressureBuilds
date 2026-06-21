@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const navLinks = [
@@ -21,8 +22,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3 shrink-0">
-            <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-black text-sm tracking-tight">MP</span>
+            <div className="w-9 h-9 bg-white rounded-lg overflow-hidden shrink-0">
+              <Image
+                src="/media/logo/maxpressureequipmentlogo.jpeg"
+                alt="Max Pressure Equipment"
+                width={36}
+                height={36}
+                className="object-contain w-full h-full"
+              />
             </div>
             <div className="hidden sm:block">
               <div className="text-white font-bold text-sm leading-tight tracking-wide">

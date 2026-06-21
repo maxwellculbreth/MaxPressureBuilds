@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Surface Cleaners',
   description:
-    'Professional flat surface cleaners from 16" to 24" for driveways, parking lots, decks, and commercial flatwork. Rated for commercial pressure washer output.',
+    'Professional flat surface cleaners for driveways, parking lots, and commercial flatwork. Rated for commercial pressure washer output.',
   openGraph: {
     title: 'Surface Cleaners | Max Pressure Equipment',
     description:
@@ -15,64 +16,32 @@ export const metadata: Metadata = {
 
 const products = [
   {
-    name: '16" Flat Surface Cleaner',
-    tag: 'Residential',
-    price: '$185',
-    psi: 'Up to 4,000 PSI',
-    gpm: '2–4 GPM',
-    description:
-      'Compact and maneuverable. Ideal for residential driveways, walkways, and patios. Dual rotating nozzles for streak-free coverage.',
-    specs: ['Dual rotating nozzles', 'Stainless spray bar', 'Universal quick-connect', '1/4" inlet'],
-  },
-  {
-    name: '20" HD Surface Cleaner',
-    tag: 'Most Popular',
-    price: '$245',
-    psi: 'Up to 4,000 PSI',
-    gpm: '2–5 GPM',
-    description:
-      'The go-to cleaner for residential and light commercial work. Wider coverage means faster jobs and more money per hour.',
-    specs: ['Dual rotating nozzles', 'Ball bearing swivel', 'Ergonomic handle', '1/4" & 3/8" fittings'],
-  },
-  {
-    name: '24" Commercial Cleaner',
+    name: 'MP-3040 18" Surface Cleaner',
     tag: 'Commercial',
-    price: '$380',
-    psi: 'Up to 4,000 PSI',
-    gpm: '3–8 GPM',
+    price: '$250',
     description:
-      'Built for parking lots, warehouse floors, and large-scale commercial flatwork. Maximum coverage with commercial-grade durability.',
-    specs: ['Triple rotating nozzles', 'Heavy-duty housing', 'Ball bearing assembly', '3/8" M22 inlet'],
+      'Versatile 18-inch commercial surface cleaner built for daily production work. Handles driveways, sidewalks, parking lots, and decks. Pairs with most 4+ GPM commercial machines.',
+    specs: [
+      '18" cleaning width',
+      'Dual rotating nozzles',
+      'Commercial-grade housing',
+      'Quick-connect inlet',
+    ],
+    image: '/media/surface-cleaners/18INCHSURFACECLEANER(MP3040).png',
   },
   {
-    name: 'Whisper Wash Classic 19"',
-    tag: 'Premium Quiet',
-    price: '$320',
-    psi: 'Up to 4,000 PSI',
-    gpm: '2–6 GPM',
+    name: 'MP-3080 30" Surface Cleaner',
+    tag: 'Heavy Duty',
+    price: '$600',
     description:
-      'Industry-favorite for low-vibration, quiet operation. Sealed bearing system and dual nozzle design. Built to last.',
-    specs: ['Ultra-low noise', 'Sealed bearing system', 'Dual vacuum ports', 'Integrated skirt'],
-  },
-  {
-    name: 'Gutter & Curb Attachment',
-    tag: 'Specialty',
-    price: '$135',
-    psi: 'Up to 3,500 PSI',
-    gpm: '2–4 GPM',
-    description:
-      'Clean curbs, gutters, and channels without bending over. Angled head design gets into tight spaces.',
-    specs: ['Angled spray head', 'Extension wand', '200° rotating nozzle', 'Quick-connect inlet'],
-  },
-  {
-    name: 'Deck & Fence Surface Wand',
-    tag: 'Wood-Safe',
-    price: '$165',
-    psi: 'Up to 3,000 PSI',
-    gpm: '2–4 GPM',
-    description:
-      'Wide-fan wand attachment for cleaning wood decks, fences, and siding without streaks or damage.',
-    specs: ['40" wide fan pattern', 'Adjustable pressure', 'Wood-safe nozzle tips', 'Extension compatible'],
+      'High-output 30-inch surface cleaner for maximum coverage on large commercial jobs. Built for parking lots, warehouse floors, and any job where speed matters. Requires high-GPM machine.',
+    specs: [
+      '30" cleaning width',
+      'Heavy-duty construction',
+      'High-flow rated',
+      'Professional-grade bearings',
+    ],
+    image: '/media/surface-cleaners/30INCHSURFACECLEANER(MP3080).png',
   },
 ]
 
@@ -97,8 +66,8 @@ export default function SurfaceCleanersPage() {
               Surface Cleaners Built for Production Work
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed mb-8">
-              Clean more surface in less time. Our surface cleaners range from 16" residential
-              units to 24" commercial-grade cleaners built for full days of hard use.
+              18&quot; to 30&quot; — built for driveways, parking lots, and full days of commercial
+              flatwork.
             </p>
             <Link
               href="/contact"
@@ -115,47 +84,26 @@ export default function SurfaceCleanersPage() {
 
       {/* Products */}
       <section className="bg-slate-900 py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {products.map((product) => (
               <div
                 key={product.name}
                 className="bg-slate-800 border border-slate-700/50 rounded-xl overflow-hidden flex flex-col"
               >
-                <div
-                  className="h-36 bg-slate-700 flex items-center justify-center relative"
-                  style={{
-                    backgroundImage:
-                      'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.02) 10px, rgba(255,255,255,0.02) 20px)',
-                  }}
-                >
-                  <svg
-                    className="w-14 h-14 text-slate-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="12" r="9" strokeWidth={1} />
-                    <circle cx="12" cy="12" r="4" strokeWidth={1} />
-                    <line x1="12" y1="3" x2="12" y2="7" strokeWidth={1} />
-                    <line x1="12" y1="17" x2="12" y2="21" strokeWidth={1} />
-                    <line x1="3" y1="12" x2="7" y2="12" strokeWidth={1} />
-                    <line x1="17" y1="12" x2="21" y2="12" strokeWidth={1} />
-                  </svg>
+                <div className="relative h-64 bg-white">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-contain p-6"
+                  />
                   <div className="absolute top-3 right-3 bg-blue-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
                     {product.tag}
                   </div>
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <div className="flex gap-2 mb-3">
-                    <span className="inline-block bg-slate-700 text-slate-300 text-xs px-2.5 py-1 rounded-full font-mono">
-                      {product.psi}
-                    </span>
-                    <span className="inline-block bg-slate-700 text-slate-300 text-xs px-2.5 py-1 rounded-full font-mono">
-                      {product.gpm}
-                    </span>
-                  </div>
-                  <h2 className="text-white font-bold text-lg mb-2">{product.name}</h2>
+                  <h2 className="text-white font-bold text-xl mb-2">{product.name}</h2>
                   <p className="text-slate-400 text-sm leading-relaxed mb-5">{product.description}</p>
                   <div className="mb-5 flex-1">
                     <p className="text-slate-500 text-xs uppercase font-semibold tracking-wider mb-2">
@@ -183,7 +131,7 @@ export default function SurfaceCleanersPage() {
                     </ul>
                   </div>
                   <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
-                    <span className="text-white font-bold text-xl">{product.price}</span>
+                    <span className="text-white font-bold text-2xl">{product.price}</span>
                     <Link
                       href="/contact"
                       className="bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
@@ -205,8 +153,8 @@ export default function SurfaceCleanersPage() {
             Not sure which cleaner is right for you?
           </h2>
           <p className="text-blue-100 mb-7 max-w-md mx-auto">
-            Tell us your machine's GPM and the type of work you do — we'll point you to the right
-            tool.
+            Tell us your machine&apos;s GPM and the type of work you do — we&apos;ll point you to
+            the right tool.
           </p>
           <Link
             href="/contact"
