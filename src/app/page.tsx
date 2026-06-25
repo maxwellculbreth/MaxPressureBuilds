@@ -140,18 +140,21 @@ const featuredProducts = [
     description: 'Starting at $6,000',
     href: '/trailer-builds',
     image: '/media/trailer-builds/MAXFLOW%20COMMERICAL%20BUILD.png',
+    imageClass: 'object-cover group-hover:scale-105 transition-transform duration-300',
   },
   {
     name: 'Surface Cleaners',
     description: 'From $250',
     href: '/surface-cleaners',
     image: '/media/surface-cleaners/18INCHSURFACECLEANER(MP3040).png',
+    imageClass: 'object-contain p-8 group-hover:scale-105 transition-transform duration-300',
   },
   {
     name: 'Spray Guns',
     description: 'From $45',
     href: '/spray-guns',
-    image: '/media/spray-guns/BLUESOFTWASHGUN(MP2405).png',
+    image: '/media/spray-guns/SHORTWANDWITHDUALTIP(MP2405SP).png',
+    imageClass: 'object-contain p-8 group-hover:scale-105 transition-transform duration-300',
   },
 ]
 
@@ -217,8 +220,90 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What We Build */}
+      {/* Pressure Washing Builds */}
       <section className="bg-slate-900 py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-3">
+              Pressure Washing Builds
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Built to Work. Built to Last.
+            </h2>
+            <p className="text-slate-400 max-w-xl mx-auto">
+              Three complete trailer packages — from starter contractor rigs to full commercial
+              setups. Every build is specced for real-world daily use.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {featuredBuilds.map((build) => (
+              <div
+                key={build.name}
+                className="bg-slate-800 border border-slate-700/50 rounded-xl overflow-hidden flex flex-col"
+              >
+                {build.image ? (
+                  <div className="relative h-52 bg-white">
+                    <Image
+                      src={build.image}
+                      alt={build.name}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                      {build.tag}
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    className="h-52 bg-slate-700 flex items-center justify-center relative"
+                    style={{
+                      backgroundImage:
+                        'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.02) 10px, rgba(255,255,255,0.02) 20px)',
+                    }}
+                  >
+                    <svg className="w-16 h-16 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7h8" />
+                    </svg>
+                    <div className="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                      {build.tag}
+                    </div>
+                  </div>
+                )}
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="inline-block bg-slate-700 text-slate-300 text-xs px-2.5 py-1 rounded-full font-mono mb-3 self-start">
+                    {build.spec}
+                  </div>
+                  <h3 className="text-white font-bold text-lg mb-2">{build.name}</h3>
+                  <p className="text-slate-400 text-sm mb-5 leading-relaxed flex-1">{build.description}</p>
+                  <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
+                    <span className="text-white font-bold">{build.price}</span>
+                    <Link
+                      href="/contact"
+                      className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
+                    >
+                      Start my build →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              href="/trailer-builds"
+              className="inline-flex items-center gap-2 border border-slate-600 hover:border-slate-400 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors text-sm"
+            >
+              See Full Build Details
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Build */}
+      <section className="bg-slate-950 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What We Build</h2>
@@ -319,7 +404,7 @@ export default function HomePage() {
                   src={product.image}
                   alt={product.name}
                   fill
-                  className="object-contain p-8 group-hover:scale-105 transition-transform duration-300"
+                  className={product.imageClass}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
@@ -332,84 +417,6 @@ export default function HomePage() {
                   </div>
                 </div>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Trailer Builds */}
-      <section className="bg-slate-950 py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
-            <div>
-              <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-2">
-                Trailer Builds
-              </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Popular Build Packages
-              </h2>
-            </div>
-            <Link
-              href="/trailer-builds"
-              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors shrink-0"
-            >
-              View all builds
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {featuredBuilds.map((build) => (
-              <div
-                key={build.name}
-                className="bg-slate-800 border border-slate-700/50 rounded-xl overflow-hidden flex flex-col"
-              >
-                {build.image ? (
-                  <div className="relative h-44 bg-white">
-                    <Image
-                      src={build.image}
-                      alt={build.name}
-                      fill
-                      className="object-contain p-4"
-                    />
-                    <div className="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">
-                      {build.tag}
-                    </div>
-                  </div>
-                ) : (
-                  <div
-                    className="h-44 bg-slate-700 flex items-center justify-center relative"
-                    style={{
-                      backgroundImage:
-                        'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.02) 10px, rgba(255,255,255,0.02) 20px)',
-                    }}
-                  >
-                    <svg className="w-14 h-14 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7h8" />
-                    </svg>
-                    <div className="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">
-                      {build.tag}
-                    </div>
-                  </div>
-                )}
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="inline-block bg-slate-700 text-slate-300 text-xs px-2.5 py-1 rounded-full font-mono mb-3 self-start">
-                    {build.spec}
-                  </div>
-                  <h3 className="text-white font-bold text-base mb-2">{build.name}</h3>
-                  <p className="text-slate-400 text-sm mb-5 leading-relaxed flex-1">{build.description}</p>
-                  <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
-                    <span className="text-white font-bold">{build.price}</span>
-                    <Link
-                      href="/contact"
-                      className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
-                    >
-                      Start my build →
-                    </Link>
-                  </div>
-                </div>
-              </div>
             ))}
           </div>
         </div>
