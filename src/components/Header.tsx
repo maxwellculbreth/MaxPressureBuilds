@@ -23,12 +23,12 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3 shrink-0">
-            <div className="w-9 h-9 bg-white rounded-lg overflow-hidden shrink-0">
+            <div className="w-11 h-11 shrink-0">
               <Image
-                src="/media/logo/maxpressureequipmentlogo.jpeg"
+                src="/media/logo/TRANSPARENTLOGO.png"
                 alt="Max Pressure Equipment"
-                width={36}
-                height={36}
+                width={44}
+                height={44}
                 className="object-contain w-full h-full"
               />
             </div>

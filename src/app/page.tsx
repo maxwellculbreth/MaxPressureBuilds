@@ -197,16 +197,14 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="max-w-3xl">
             <div className="mb-6">
-              <div className="w-16 h-16 bg-white rounded-xl overflow-hidden">
-                <Image
-                  src="/media/logo/maxpressureequipmentlogo.jpeg"
-                  alt="Max Pressure Equipment"
-                  width={64}
-                  height={64}
-                  className="object-contain w-full h-full"
-                  priority
-                />
-              </div>
+              <Image
+                src="/media/logo/TRANSPARENTLOGO.png"
+                alt="Max Pressure Equipment"
+                width={88}
+                height={88}
+                className="object-contain"
+                priority
+              />
             </div>
             <div className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-6">
               <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
