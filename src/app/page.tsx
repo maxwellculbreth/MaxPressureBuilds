@@ -64,6 +64,22 @@ const features = [
     ),
   },
   {
+    title: 'Pressure Washers',
+    description:
+      'Gear-driven commercial machines built to run all day. Starting with a Predator 420cc running a 5 GPM Canpump — real output for real contractors.',
+    href: '/pressure-washers',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M13 10V3L4 14h7v7l9-11h-7z"
+        />
+      </svg>
+    ),
+  },
+  {
     title: 'Equipment Consulting',
     description:
       'Not sure what you need? We help contractors build smart — matching equipment to services, volume, and budget.',
@@ -112,7 +128,7 @@ const featuredBuilds = [
     description:
       'Starter contractor package with two Coxreels, garden hose reel, 35-gal chem tank, 18" surface cleaner, and downstream injector.',
     price: 'Starting at $6,000',
-    image: null as string | null,
+    image: '/media/trailer-builds/MaxLaunch%20Build.png' as string | null,
   },
   {
     name: 'MaxFlow Commercial Build',
@@ -130,11 +146,18 @@ const featuredBuilds = [
     description:
       '6.4×14 tandem trailer, 12V soft wash system, 225 or 325-gal buffer tank, aluminum fuel cell, and full custom welding. Built for serious output.',
     price: 'Starting at $14,000',
-    image: null as string | null,
+    image: '/media/trailer-builds/MaxMayhemPlaceholder.png' as string | null,
   },
 ]
 
 const featuredProducts = [
+  {
+    name: 'Pressure Washers',
+    description: 'From $1,000',
+    href: '/pressure-washers',
+    image: '/media/pressure-washers/5GPM3600PSI.png',
+    imageClass: 'object-contain p-8 group-hover:scale-105 transition-transform duration-300',
+  },
   {
     name: 'Trailer Builds',
     description: 'Starting at $6,000',
