@@ -237,6 +237,17 @@ export default function HomePage() {
                 View Trailer Builds
               </Link>
             </div>
+            <div className="mt-6">
+              <Link
+                href="/beginner-setup"
+                className="inline-flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 group"
+              >
+                <span className="text-white font-semibold text-sm group-hover:text-blue-300 transition-colors">
+                  What I&apos;d Buy Again Starting Pressure Washing →
+                </span>
+                <span className="text-slate-500 text-xs">Beginner gear list + Amazon equipment picks</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
