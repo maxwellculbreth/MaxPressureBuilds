@@ -4,12 +4,18 @@ import Image from 'next/image'
 export const metadata: Metadata = {
   title: "What I'd Buy Again Starting a Pressure Washing Business",
   description:
-    "The beginner pressure washing gear I'd actually buy again — ranked by buy order, built around real field experience running Max Pressure from the ground up.",
+    "My beginner pressure washing gear list — the exact type of equipment I'd buy again starting from scratch.",
   openGraph: {
     title: "What I'd Buy Again Starting a Pressure Washing Business",
     description:
-      "Skip the trial and error. Here's the exact beginner setup I'd build again if I was starting Max Pressure from scratch.",
+      "My beginner pressure washing gear list — the exact type of equipment I'd buy again starting from scratch.",
     url: 'https://maxpressureequipment.com/beginner-setup',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "What I'd Buy Again Starting a Pressure Washing Business",
+    description:
+      "My beginner pressure washing gear list — the exact type of equipment I'd buy again starting from scratch.",
   },
 }
 
