@@ -67,7 +67,7 @@ const beginnerBuyOrder: BuyOrderItem[] = [
       {
         title: '18 Inch WOJET Surface Cleaner',
         note: "Good smaller option for a 4 GPM beginner setup. Easier to handle and a better match if you're not running a higher-flow machine yet.",
-        url: 'https://www.amazon.com/dp/REPLACE-WOJET-ASIN?tag=YOURTAG-20',
+        url: 'https://www.amazon.com/dp/REPLACE-WOJET-ASIN?tag=maxpressure45-20',
         badge: 'amazon',
       },
     ],
@@ -81,7 +81,7 @@ const beginnerBuyOrder: BuyOrderItem[] = [
       {
         title: 'POHIR Blue High Pressure Hose',
         note: 'Good beginner-friendly blue pressure hose option. Before ordering, verify the length, fitting size, PSI rating, and whether you need 3/8 quick connects for your setup.',
-        url: 'https://www.amazon.com/dp/B0C69298VP?tag=YOURTAG-20',
+        url: 'https://www.amazon.com/dp/B0C69298VP?tag=maxpressure45-20',
         badge: 'amazon',
       },
     ],
@@ -95,7 +95,7 @@ const beginnerBuyOrder: BuyOrderItem[] = [
       {
         title: 'MTM Hydro DN10 Ball Valve',
         note: "This is the style of ball valve I'd want in a beginner setup. Make sure your fittings match your hose, gun, and surface cleaner setup. Keep extra O-rings around because quick connects will leak eventually.",
-        url: 'https://www.amazon.com/dp/B07LCSWL4Y?tag=YOURTAG-20',
+        url: 'https://www.amazon.com/dp/B07LCSWL4Y?tag=maxpressure45-20',
         badge: 'amazon',
       },
     ],
@@ -115,7 +115,7 @@ const beginnerBuyOrder: BuyOrderItem[] = [
       {
         title: 'General Pump Chemical Injector 100775',
         note: "Common downstream injector option. Good to test if you're building a simple beginner house wash setup. Hose length, injector size, and nozzle choice can affect whether it pulls well.",
-        url: 'https://www.amazon.com/dp/B01JB6D23K?tag=YOURTAG-20',
+        url: 'https://www.amazon.com/dp/B01JB6D23K?tag=maxpressure45-20',
         badge: 'amazon',
       },
     ],
@@ -129,7 +129,7 @@ const beginnerBuyOrder: BuyOrderItem[] = [
       {
         title: 'Jariko J-Rod Nozzle Kit — 4 GPM',
         note: 'Good starter J-rod for a 4 GPM machine. If you move to 5 GPM, make sure your nozzles are sized correctly for your machine.',
-        url: 'https://www.amazon.com/dp/B09RV52WGP?tag=YOURTAG-20',
+        url: 'https://www.amazon.com/dp/B09RV52WGP?tag=maxpressure45-20',
         badge: 'amazon',
       },
     ],
@@ -143,19 +143,19 @@ const beginnerBuyOrder: BuyOrderItem[] = [
       {
         title: 'Clear Safety Goggles',
         note: 'Basic eye protection for mixing, spraying, and rinsing around chemicals. Eye protection is cheap compared to a chemical splash.',
-        url: 'https://www.amazon.com/dp/B0G7YLYCNB?tag=YOURTAG-20',
+        url: 'https://www.amazon.com/dp/B0G7YLYCNB?tag=maxpressure45-20',
         badge: 'amazon',
       },
       {
         title: 'Disposable Nitrile Gloves',
         note: 'Useful when mixing chemicals, handling injectors, or dealing with stronger batches. Keep a box on the truck.',
-        url: 'https://www.amazon.com/dp/B0C3SSXL4K?tag=YOURTAG-20',
+        url: 'https://www.amazon.com/dp/B0C3SSXL4K?tag=maxpressure45-20',
         badge: 'amazon',
       },
       {
         title: '3M Reusable Respirator',
         note: "Useful baseline respirator option for chemical work, but users should verify the cartridges are rated for the exact chemicals they're using by checking the SDS and manufacturer specs. Never mix chemicals and avoid breathing fumes.",
-        url: 'https://www.amazon.com/dp/B01H0S90QE?tag=YOURTAG-20',
+        url: 'https://www.amazon.com/dp/B01H0S90QE?tag=maxpressure45-20',
         badge: 'amazon',
       },
     ],
@@ -169,13 +169,13 @@ const beginnerBuyOrder: BuyOrderItem[] = [
       {
         title: 'Chapin 1 Gallon Bleach/Disinfectant Sprayer',
         note: 'Good small sprayer for bleach-compatible spot treatment and simple beginner use.',
-        url: 'https://www.amazon.com/dp/B00295QD96?tag=YOURTAG-20',
+        url: 'https://www.amazon.com/dp/B00295QD96?tag=maxpressure45-20',
         badge: 'amazon',
       },
       {
         title: 'Chapin 2 Gallon Sprayer Two Pack',
         note: "Good if you want extra capacity or want separate sprayers for different uses. Label your sprayers and don't cross-contaminate chemicals.",
-        url: 'https://www.amazon.com/dp/B0C7LY7NV4?tag=YOURTAG-20',
+        url: 'https://www.amazon.com/dp/B0C7LY7NV4?tag=maxpressure45-20',
         badge: 'amazon',
       },
     ],
@@ -189,13 +189,13 @@ const beginnerBuyOrder: BuyOrderItem[] = [
       {
         title: 'VEVOR Wall Mounted Garden Hose Reel',
         note: "Cheap garden hose reel option I'd consider bolting onto a trailer or skid. Verify fitting size and mounting before ordering.",
-        url: 'https://www.amazon.com/dp/B0F5NL3SC8?tag=YOURTAG-20',
+        url: 'https://www.amazon.com/dp/B0F5NL3SC8?tag=maxpressure45-20',
         badge: 'amazon',
       },
       {
         title: 'MINGLE High Pressure Hose Reel',
         note: 'Cheap high pressure hose reel similar to the type I started with. Make sure the pressure rating, hose capacity, and fittings match your setup.',
-        url: 'https://www.amazon.com/dp/B09Q8PPMPK?tag=YOURTAG-20',
+        url: 'https://www.amazon.com/dp/B09Q8PPMPK?tag=maxpressure45-20',
         badge: 'amazon',
       },
     ],
@@ -222,25 +222,25 @@ const badgeConfig: Record<Badge, { label: string; className: string }> = {
 // ─── Other page data ──────────────────────────────────────────────────────────
 
 const softWashItems = [
-  { title: 'Chemical-Resistant Gloves', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
-  { title: 'Safety Glasses / Face Shield', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
-  { title: 'Respirator or Mask', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
-  { title: 'Pump Sprayer', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
-  { title: '12V Soft Wash Pump', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
-  { title: 'Soft Wash Hose', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
-  { title: 'Nozzle Tips', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
-  { title: 'Measuring Containers', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
+  { title: 'Chemical-Resistant Gloves', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+  { title: 'Safety Glasses / Face Shield', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+  { title: 'Respirator or Mask', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+  { title: 'Pump Sprayer', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+  { title: '12V Soft Wash Pump', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+  { title: 'Soft Wash Hose', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+  { title: 'Nozzle Tips', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+  { title: 'Measuring Containers', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
 ]
 
 const organizeItems = [
-  { title: 'Pressure Hose Reel', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
-  { title: 'Garden Hose Reel', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
-  { title: 'Contractor-Grade Garden Hose', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
-  { title: 'Hose Guides / Corner Guards', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
-  { title: 'Toolbox or Parts Organizer', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
-  { title: 'Spare O-Rings', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
-  { title: 'Spare Nozzles', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
-  { title: 'Teflon Tape / Thread Sealant', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
+  { title: 'Pressure Hose Reel', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+  { title: 'Garden Hose Reel', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+  { title: 'Contractor-Grade Garden Hose', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+  { title: 'Hose Guides / Corner Guards', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+  { title: 'Toolbox or Parts Organizer', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+  { title: 'Spare O-Rings', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+  { title: 'Spare Nozzles', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+  { title: 'Teflon Tape / Thread Sealant', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
 ]
 
 const wouldntBuy = [
