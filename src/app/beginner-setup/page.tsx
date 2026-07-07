@@ -168,11 +168,10 @@ const beginnerBuyOrder: BuyOrderItem[] = [
       "An X-Jet is one of the easiest ways for a beginner to get into house washing because it lets you apply mix without relying only on your downstream injector. It is simple, portable, and useful for reaching higher areas or troubleshooting when an injector does not pull well. Long-term, I'd still learn downstreaming and eventually dedicated soft wash systems, but an X-Jet can get you washing houses faster.",
     picks: [
       {
-        title: 'Full X-Jet Kit for 4–4.5 GPM Machines',
+        title: 'X-Jet Adjustable Long Range Nozzle Kit',
         approxPrice: '≈$180',
         note: "Good fit for 4–4.5 GPM beginner machines. Make sure you buy the correct kit/nozzle sizing for your machine's GPM.",
-        // TODO: Replace USE_PLACEHOLDER_XJET_LINK_FOR_NOW with the real X-Jet Amazon affiliate link/ASIN.
-        url: 'https://www.amazon.com/dp/USE_PLACEHOLDER_XJET_LINK_FOR_NOW?tag=maxpressure45-20',
+        url: 'https://www.amazon.com/dp/B071RR8M91?tag=maxpressure45-20',
         badge: 'amazon',
       },
     ],
