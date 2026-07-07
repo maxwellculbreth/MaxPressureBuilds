@@ -13,72 +13,213 @@ export const metadata: Metadata = {
   },
 }
 
-const mainProducts = [
+// ─── Product data — swap links or add picks here ─────────────────────────────
+
+type Badge = 'no-commission' | 'canpump' | 'amazon'
+
+interface Pick {
+  title: string
+  note: string
+  url: string
+  badge: Badge
+}
+
+interface BuyOrderItem {
+  num: number
+  title: string
+  description: string
+  picks: Pick[]
+}
+
+const beginnerBuyOrder: BuyOrderItem[] = [
   {
-    id: 'A',
-    title: '4 GPM Gas Pressure Washer',
-    bestFor: 'First serious business machine',
-    why: 'Strong enough for houses, driveways, patios, and basic residential jobs without jumping straight into a trailer build.',
-    mistake: "Don't start with a weak electric unit if your goal is to make money.",
-    url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20',
+    num: 1,
+    title: '4–5 GPM Pressure Washer',
+    description:
+      "This is the first real decision. If you're trying to make money, I would skip tiny electric units and start with a serious gas machine. A 4–5 GPM unit is enough for beginner residential house washes, driveways, patios, and sidewalks without jumping straight into a huge trailer build.",
+    picks: [
+      {
+        title: 'Harbor Freight Predator 4400 PSI / 4.2 GPM Commercial Duty Pressure Washer',
+        note: "Budget-friendly first serious washer. Good if you want local pickup and a lower upfront cost. I'd consider this if you're starting lean and need to get working fast.",
+        url: 'https://www.harborfreight.com/4400-psi-42-gpm-13-hp-420cc-commercial-duty-pressure-washer-epa-71102.html',
+        badge: 'no-commission',
+      },
+      {
+        title: 'Canpump Belt Drive 5 GPM Pressure Washer — 13 HP Loncin',
+        note: 'My stronger pick if you want to start closer to a professional setup. 5 GPM helps you work faster, and belt drive is a better direction if you plan to build a trailer or skid setup.',
+        url: 'https://www.canpump.com/canpump-belt-drive-pressure-washer-13-hp-loncin-engine-triplex-pump/?ref=qraopqpr',
+        badge: 'canpump',
+      },
+    ],
   },
   {
-    id: 'B',
-    title: '16–20 Inch Surface Cleaner',
-    bestFor: 'Driveways, patios, sidewalks',
-    why: 'Makes flatwork faster and more profitable.',
-    mistake: "Don't undercharge driveway cleaning if you're using the right equipment.",
-    url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20',
+    num: 2,
+    title: '16–21 Inch Surface Cleaner',
+    description:
+      'This is what makes flatwork profitable. Wand-cleaning an entire driveway is slow. A surface cleaner lets you clean driveways, patios, and sidewalks faster and more consistently.',
+    picks: [
+      {
+        title: 'Canpump 21 Inch Stainless Steel Surface Cleaner',
+        note: "My bigger surface cleaner pick for a 5 GPM setup. Better for production work, driveways, and larger concrete areas.",
+        url: 'https://www.canpump.com/canpump-stainless-steel-surface-cleaner-4000-psi/?ref=qraopqpr',
+        badge: 'canpump',
+      },
+      {
+        title: '18 Inch WOJET Surface Cleaner',
+        note: "Good smaller option for a 4 GPM beginner setup. Easier to handle and a better match if you're not running a higher-flow machine yet.",
+        url: 'https://www.amazon.com/dp/REPLACE-WOJET-ASIN?tag=YOURTAG-20',
+        badge: 'amazon',
+      },
+    ],
   },
   {
-    id: 'C',
-    title: '100–200 Ft Pressure Hose',
-    bestFor: 'Moving around houses without dragging the machine everywhere',
-    why: 'Saves time and makes you look more professional.',
-    mistake: "Don't buy the cheapest hose if it kinks constantly.",
-    url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20',
+    num: 3,
+    title: '100–200 Ft High Pressure Hose',
+    description:
+      "Extra hose saves time because you don't have to drag the pressure washer around every corner of the house. For paid jobs, 100–200 ft of hose makes you look and work more professionally.",
+    picks: [
+      {
+        title: 'POHIR Blue High Pressure Hose',
+        note: 'Good beginner-friendly blue pressure hose option. Before ordering, verify the length, fitting size, PSI rating, and whether you need 3/8 quick connects for your setup.',
+        url: 'https://www.amazon.com/dp/B0C69298VP?tag=YOURTAG-20',
+        badge: 'amazon',
+      },
+    ],
   },
   {
-    id: 'D',
-    title: 'DN10 / High-Flow Ball Valve',
-    bestFor: 'Fast nozzle changes and controlling water flow',
-    why: 'One of the first upgrades that makes your setup feel professional.',
-    mistake: 'Make sure your fittings match your hose setup.',
-    url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20',
+    num: 4,
+    title: 'Ball Valve and Quick Connects',
+    description:
+      'A ball valve is one of the first upgrades that makes your setup feel professional. It lets you control water flow and swap from gun to surface cleaner faster without walking back to the machine every time.',
+    picks: [
+      {
+        title: 'MTM Hydro DN10 Ball Valve',
+        note: "This is the style of ball valve I'd want in a beginner setup. Make sure your fittings match your hose, gun, and surface cleaner setup. Keep extra O-rings around because quick connects will leak eventually.",
+        url: 'https://www.amazon.com/dp/B07LCSWL4Y?tag=YOURTAG-20',
+        badge: 'amazon',
+      },
+    ],
   },
   {
-    id: 'E',
-    title: 'Quick Connect Kit',
-    bestFor: 'Nozzles, guns, hoses, surface cleaners',
-    why: 'Cheap upgrade that saves constant frustration.',
-    mistake: 'Keep extra O-rings.',
-    url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20',
-  },
-  {
-    id: 'F',
+    num: 5,
     title: 'Downstream Injector',
-    bestFor: 'Applying house wash mix',
-    why: 'Simple, affordable, and enough for many beginner house wash jobs.',
-    mistake: "Don't expect every injector to pull perfectly with every hose length.",
-    url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20',
+    description:
+      'A downstream injector lets you apply house wash mix through your pressure washer line. This is the simple beginner way to start soft washing siding before you overcomplicate your setup.',
+    picks: [
+      {
+        title: 'Canpump Adjustable Chemical Injector — 5 GPM / 2.1 mm',
+        note: "My pick for a 5 GPM setup. Match your injector/orifice to your machine's flow so it pulls chemical properly.",
+        url: 'https://www.canpump.com/adjustable-chemical-injector-4500-psi-5-us-gpm-2-1-mm-orifice-qc-socket-inlet-general-pump-style/?ref=qraopqpr',
+        badge: 'canpump',
+      },
+      {
+        title: 'General Pump Chemical Injector 100775',
+        note: "Common downstream injector option. Good to test if you're building a simple beginner house wash setup. Hose length, injector size, and nozzle choice can affect whether it pulls well.",
+        url: 'https://www.amazon.com/dp/B01JB6D23K?tag=YOURTAG-20',
+        badge: 'amazon',
+      },
+    ],
   },
   {
-    id: 'G',
-    title: 'J-Rod Nozzle Kit',
-    bestFor: 'House washing and rinsing',
-    why: 'Lets you change spray patterns quickly without digging through loose tips.',
-    mistake: 'Know which tips are soap and which are rinse.',
-    url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20',
+    num: 6,
+    title: 'J-Rod / Shooter Tips',
+    description:
+      "A J-rod keeps your main soap and rinse tips together so you're not digging through loose nozzles on every job. This is especially useful for house washing.",
+    picks: [
+      {
+        title: 'Jariko J-Rod Nozzle Kit — 4 GPM',
+        note: 'Good starter J-rod for a 4 GPM machine. If you move to 5 GPM, make sure your nozzles are sized correctly for your machine.',
+        url: 'https://www.amazon.com/dp/B09RV52WGP?tag=YOURTAG-20',
+        badge: 'amazon',
+      },
+    ],
   },
   {
-    id: 'H',
-    title: 'X-Jet',
-    bestFor: 'Higher areas or when downstreaming is not enough',
-    why: 'Useful tool for certain jobs and troubleshooting.',
-    mistake: "Don't rely on it as your only chemical application method forever.",
-    url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20',
+    num: 7,
+    title: 'PPE and Safety Gear',
+    description:
+      "Do not skip safety gear. When you're working with house wash mix, bleach, surfactant, or hot chemical batches, you need eye protection, gloves, and respiratory protection where appropriate.",
+    picks: [
+      {
+        title: 'Clear Safety Goggles',
+        note: 'Basic eye protection for mixing, spraying, and rinsing around chemicals. Eye protection is cheap compared to a chemical splash.',
+        url: 'https://www.amazon.com/dp/B0G7YLYCNB?tag=YOURTAG-20',
+        badge: 'amazon',
+      },
+      {
+        title: 'Disposable Nitrile Gloves',
+        note: 'Useful when mixing chemicals, handling injectors, or dealing with stronger batches. Keep a box on the truck.',
+        url: 'https://www.amazon.com/dp/B0C3SSXL4K?tag=YOURTAG-20',
+        badge: 'amazon',
+      },
+      {
+        title: '3M Reusable Respirator',
+        note: "Useful baseline respirator option for chemical work, but users should verify the cartridges are rated for the exact chemicals they're using by checking the SDS and manufacturer specs. Never mix chemicals and avoid breathing fumes.",
+        url: 'https://www.amazon.com/dp/B01H0S90QE?tag=YOURTAG-20',
+        badge: 'amazon',
+      },
+    ],
+  },
+  {
+    num: 8,
+    title: 'Pump Sprayer',
+    description:
+      'A pump sprayer is useful for spot treating, applying small chemical batches, touching up problem areas, and handling small jobs without pulling out a full soft wash system.',
+    picks: [
+      {
+        title: 'Chapin 1 Gallon Bleach/Disinfectant Sprayer',
+        note: 'Good small sprayer for bleach-compatible spot treatment and simple beginner use.',
+        url: 'https://www.amazon.com/dp/B00295QD96?tag=YOURTAG-20',
+        badge: 'amazon',
+      },
+      {
+        title: 'Chapin 2 Gallon Sprayer Two Pack',
+        note: "Good if you want extra capacity or want separate sprayers for different uses. Label your sprayers and don't cross-contaminate chemicals.",
+        url: 'https://www.amazon.com/dp/B0C7LY7NV4?tag=YOURTAG-20',
+        badge: 'amazon',
+      },
+    ],
+  },
+  {
+    num: 9,
+    title: 'Hose Reel / Storage Upgrades',
+    description:
+      "Hose reels are not required on day one, but they make you look cleaner, save time, and help keep your trailer or skid from becoming a mess.",
+    picks: [
+      {
+        title: 'VEVOR Wall Mounted Garden Hose Reel',
+        note: "Cheap garden hose reel option I'd consider bolting onto a trailer or skid. Verify fitting size and mounting before ordering.",
+        url: 'https://www.amazon.com/dp/B0F5NL3SC8?tag=YOURTAG-20',
+        badge: 'amazon',
+      },
+      {
+        title: 'MINGLE High Pressure Hose Reel',
+        note: 'Cheap high pressure hose reel similar to the type I started with. Make sure the pressure rating, hose capacity, and fittings match your setup.',
+        url: 'https://www.amazon.com/dp/B09Q8PPMPK?tag=YOURTAG-20',
+        badge: 'amazon',
+      },
+    ],
   },
 ]
+
+// ─── Badge config ─────────────────────────────────────────────────────────────
+
+const badgeConfig: Record<Badge, { label: string; className: string }> = {
+  'no-commission': {
+    label: 'No commission',
+    className: 'bg-slate-700/80 text-slate-300 border border-slate-600/60',
+  },
+  canpump: {
+    label: 'Canpump partner link',
+    className: 'bg-green-900/50 text-green-300 border border-green-700/50',
+  },
+  amazon: {
+    label: 'Amazon paid link',
+    className: 'bg-orange-900/40 text-orange-300 border border-orange-700/40',
+  },
+}
+
+// ─── Other page data ──────────────────────────────────────────────────────────
 
 const softWashItems = [
   { title: 'Chemical-Resistant Gloves', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
@@ -102,19 +243,6 @@ const organizeItems = [
   { title: 'Teflon Tape / Thread Sealant', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=YOURTAG-20' },
 ]
 
-const buyOrder = [
-  '4 GPM gas pressure washer',
-  '16–20 inch surface cleaner',
-  '100–200 ft pressure hose',
-  'Ball valve and quick connects',
-  'Downstream injector',
-  'J-rod / shooter tips',
-  'PPE and safety gear',
-  'Pump sprayer',
-  'Hose reel / storage upgrades',
-  'Backup parts kit',
-]
-
 const wouldntBuy = [
   'Giant trailer build before having customers',
   'Overpriced chemical systems before understanding downstreaming',
@@ -125,16 +253,18 @@ const wouldntBuy = [
 ]
 
 const starterSetup = [
-  '4 GPM gas pressure washer',
-  '16–20 inch surface cleaner',
+  '4–5 GPM gas pressure washer',
+  '16–21 inch surface cleaner',
   '100–200 ft pressure hose',
-  'Ball valve',
+  'Ball valve and quick connects',
   'Downstream injector',
-  'J-rod tips',
-  'PPE',
+  'J-rod / shooter tips',
+  'PPE and safety gear',
   'Pump sprayer',
-  'Basic repair parts kit',
+  'Hose reel / storage upgrades',
 ]
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function BeginnerSetupPage() {
   return (
@@ -168,7 +298,7 @@ export default function BeginnerSetupPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="#starter-setup"
+                href="#buy-order"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors text-sm"
               >
                 Shop the Starter Setup
@@ -200,115 +330,99 @@ export default function BeginnerSetupPage() {
         </div>
       </div>
 
-      {/* Buy Order */}
-      <section className="bg-slate-900 py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-3">
-              Start Here
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">My Beginner Buy Order</h2>
-            <p className="text-slate-400 mb-10">
-              This is the sequence I&apos;d follow. Don&apos;t jump ahead — every item in this list
-              unlocks the next one.
-            </p>
-            <div className="space-y-3 mb-10">
-              {buyOrder.map((item, i) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-4 bg-slate-800 border border-slate-700/50 rounded-xl px-5 py-4"
-                >
-                  <span className="flex-shrink-0 w-8 h-8 bg-blue-600/20 border border-blue-500/30 text-blue-400 text-sm font-bold rounded-full flex items-center justify-center">
-                    {i + 1}
-                  </span>
-                  <span className="text-white font-medium">{item}</span>
-                </div>
-              ))}
-            </div>
-            <div className="bg-blue-600/10 border border-blue-500/20 rounded-xl px-6 py-5">
-              <p className="text-blue-200 text-sm leading-relaxed">
-                <span className="font-semibold text-blue-300">Pro tip:</span> Don&apos;t buy
-                everything at once. Buy the essentials, make money, then upgrade the stuff that
-                saves you time.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Buy Order Accordion */}
+      <section id="buy-order" className="bg-slate-900 py-20 md:py-28">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-3">
+            Start Here
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">My Beginner Buy Order</h2>
+          <p className="text-slate-400 mb-10">
+            This is the sequence I&apos;d follow. Tap any item to see my picks and notes.
+          </p>
 
-      {/* Main Product Cards */}
-      <section id="product-cards" className="bg-slate-950 py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-3">
-              Gear Breakdown
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              The Beginner Setup I&apos;d Actually Start With
-            </h2>
-            <p className="text-slate-400 max-w-xl mx-auto">
-              Every item below is something I&apos;ve used or tested. I&apos;ve included the real
-              reason I&apos;d buy it again — and the mistake that burns beginners.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {mainProducts.map((product) => (
-              <div
-                key={product.id}
-                className="bg-slate-800 border border-slate-700/50 rounded-xl p-6 flex flex-col gap-5"
+          <div className="space-y-3 mb-10">
+            {beginnerBuyOrder.map((item) => (
+              <details
+                key={item.num}
+                className="group bg-slate-800 border border-slate-700/50 rounded-xl overflow-hidden open:border-blue-500/30"
               >
-                <div className="flex items-start gap-4">
-                  <span className="flex-shrink-0 w-9 h-9 bg-blue-600 text-white text-sm font-black rounded-lg flex items-center justify-center">
-                    {product.id}
+                <summary className="flex items-center gap-4 px-5 py-4 cursor-pointer list-none select-none [&::-webkit-details-marker]:hidden">
+                  <span className="flex-shrink-0 w-8 h-8 bg-blue-600/20 border border-blue-500/30 text-blue-400 text-sm font-bold rounded-full flex items-center justify-center">
+                    {item.num}
                   </span>
-                  <h3 className="text-white font-bold text-lg leading-snug pt-1">{product.title}</h3>
-                </div>
-                <div className="space-y-3">
-                  <div className="flex gap-2">
-                    <span className="flex-shrink-0 text-xs font-semibold text-blue-400 uppercase tracking-wider pt-0.5 w-24">
-                      Best for
-                    </span>
-                    <span className="text-slate-300 text-sm leading-relaxed">{product.bestFor}</span>
-                  </div>
-                  <div className="flex gap-2">
-                    <span className="flex-shrink-0 text-xs font-semibold text-blue-400 uppercase tracking-wider pt-0.5 w-24">
-                      Why
-                    </span>
-                    <span className="text-slate-300 text-sm leading-relaxed">{product.why}</span>
-                  </div>
-                  <div className="flex gap-2">
-                    <span className="flex-shrink-0 text-xs font-semibold text-amber-400 uppercase tracking-wider pt-0.5 w-24">
-                      Mistake
-                    </span>
-                    <span className="text-slate-400 text-sm leading-relaxed">{product.mistake}</span>
-                  </div>
-                </div>
-                <div className="pt-1">
-                  <a
-                    href={product.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm w-full justify-center"
+                  <span className="text-white font-semibold flex-1">{item.title}</span>
+                  <svg
+                    className="w-4 h-4 text-slate-400 flex-shrink-0 transition-transform duration-200 group-open:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    Check on Amazon
-                    <svg className="w-4 h-4 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                    <span className="text-blue-300 text-xs font-normal">paid link</span>
-                  </a>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+
+                <div className="px-5 pb-6 pt-1 border-t border-slate-700/50">
+                  <p className="text-slate-300 text-sm leading-relaxed mb-6">{item.description}</p>
+
+                  <p className="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-3">
+                    My picks
+                  </p>
+                  <div className="space-y-4">
+                    {item.picks.map((pick) => {
+                      const badge = badgeConfig[pick.badge]
+                      return (
+                        <div
+                          key={pick.url}
+                          className="bg-slate-900/60 border border-slate-700/40 rounded-lg p-4"
+                        >
+                          <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
+                            <span className="text-white font-semibold text-sm leading-snug flex-1">
+                              {pick.title}
+                            </span>
+                            <span
+                              className={`flex-shrink-0 text-xs font-medium px-2 py-0.5 rounded-full ${badge.className}`}
+                            >
+                              {badge.label}
+                            </span>
+                          </div>
+                          <p className="text-slate-400 text-sm leading-relaxed mb-4">{pick.note}</p>
+                          <a
+                            href={pick.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-xs"
+                          >
+                            View this pick
+                            <svg className="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </a>
+                        </div>
+                      )
+                    })}
+                  </div>
                 </div>
-              </div>
+              </details>
             ))}
+          </div>
+
+          <div className="bg-blue-600/10 border border-blue-500/20 rounded-xl px-6 py-5">
+            <p className="text-blue-200 text-sm leading-relaxed">
+              <span className="font-semibold text-blue-300">Pro tip:</span> Don&apos;t buy
+              everything at once. Buy the essentials, make money, then upgrade the stuff that
+              saves you time.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Soft Wash Basics */}
-      <section className="bg-slate-900 py-20 md:py-28">
+      <section className="bg-slate-950 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-3">
-              PPE & Chemical Application
+              PPE &amp; Chemical Application
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Soft Wash Gear I&apos;d Buy Before Taking House Washes Seriously
@@ -324,13 +438,13 @@ export default function BeginnerSetupPage() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-slate-800 hover:bg-slate-750 border border-slate-700/50 hover:border-blue-500/40 rounded-xl p-5 transition-all flex flex-col gap-3"
+                className="group bg-slate-800 border border-slate-700/50 hover:border-blue-500/40 rounded-xl p-5 transition-all flex flex-col gap-3"
               >
                 <span className="text-white font-semibold text-sm group-hover:text-blue-300 transition-colors">
                   {item.title}
                 </span>
-                <span className="text-blue-400 text-xs font-medium flex items-center gap-1">
-                  Check on Amazon →
+                <span className="text-blue-400 text-xs font-medium">
+                  Check on Amazon →{' '}
                   <span className="text-slate-500 font-normal">paid link</span>
                 </span>
               </a>
@@ -352,7 +466,7 @@ export default function BeginnerSetupPage() {
       </section>
 
       {/* Organization & Upgrades */}
-      <section className="bg-slate-950 py-20 md:py-28">
+      <section className="bg-slate-900 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-3">
@@ -373,13 +487,13 @@ export default function BeginnerSetupPage() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-slate-800 hover:bg-slate-750 border border-slate-700/50 hover:border-blue-500/40 rounded-xl p-5 transition-all flex flex-col gap-3"
+                className="group bg-slate-800 border border-slate-700/50 hover:border-blue-500/40 rounded-xl p-5 transition-all flex flex-col gap-3"
               >
                 <span className="text-white font-semibold text-sm group-hover:text-blue-300 transition-colors">
                   {item.title}
                 </span>
-                <span className="text-blue-400 text-xs font-medium flex items-center gap-1">
-                  Check on Amazon →
+                <span className="text-blue-400 text-xs font-medium">
+                  Check on Amazon →{' '}
                   <span className="text-slate-500 font-normal">paid link</span>
                 </span>
               </a>
@@ -389,7 +503,7 @@ export default function BeginnerSetupPage() {
       </section>
 
       {/* What I Wouldn't Buy */}
-      <section className="bg-slate-900 py-20 md:py-28">
+      <section className="bg-slate-950 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-3">
@@ -456,7 +570,7 @@ export default function BeginnerSetupPage() {
               </ul>
             </div>
             <a
-              href="#product-cards"
+              href="#buy-order"
               className="inline-flex items-center gap-2 bg-white text-blue-700 hover:bg-blue-50 font-bold px-7 py-3.5 rounded-lg transition-colors text-sm"
             >
               Shop the Starter Setup
