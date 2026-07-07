@@ -515,7 +515,7 @@ export default function BeginnerSetupPage() {
                   </span>
                   <div className="flex-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-3 min-w-0">
                     <span className="text-white font-semibold">{item.title}</span>
-                    <span className="text-slate-400 text-xs font-mono flex-shrink-0">{item.summaryPrice}</span>
+                    <span className="text-green-400 text-xs font-mono flex-shrink-0">{item.summaryPrice}</span>
                   </div>
                   <svg
                     className="w-4 h-4 text-slate-400 flex-shrink-0 transition-transform duration-200 group-open:rotate-180"
@@ -546,7 +546,7 @@ export default function BeginnerSetupPage() {
                               <span className="text-white font-semibold text-sm leading-snug block">
                                 {pick.title}
                               </span>
-                              <span className="inline-block mt-1 text-xs text-slate-400 bg-slate-800 border border-slate-600/40 rounded px-2 py-0.5 font-mono">
+                              <span className="inline-block mt-1 text-xs text-green-400 bg-slate-800 border border-green-700/30 rounded px-2 py-0.5 font-mono">
                                 Approx. {pick.approxPrice}
                               </span>
                             </div>
