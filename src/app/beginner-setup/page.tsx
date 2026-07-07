@@ -291,7 +291,7 @@ export default function BeginnerSetupPage() {
             </div>
           </div>
           <a
-            href="https://www.tiktok.com/@maxpressurellcllc"
+            href="https://www.tiktok.com/@maxpressurellc"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-white text-xs font-medium transition-colors"
@@ -338,7 +338,7 @@ export default function BeginnerSetupPage() {
               </svg>
             </a>
             <a
-              href="https://www.tiktok.com/@maxpressurellcllc"
+              href="https://www.tiktok.com/@maxpressurellc"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-slate-600 hover:border-slate-400 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
@@ -634,7 +634,7 @@ export default function BeginnerSetupPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://www.tiktok.com/@maxpressurellcllc"
+                href="https://www.tiktok.com/@maxpressurellc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors text-sm"
