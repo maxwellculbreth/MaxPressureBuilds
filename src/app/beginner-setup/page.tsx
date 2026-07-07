@@ -52,15 +52,15 @@ const beginnerBuyOrder: BuyOrderItem[] = [
     picks: [
       {
         title: 'Harbor Freight Predator 4400 PSI / 4.2 GPM Commercial Duty Pressure Washer',
-        approxPrice: '≈$849.99',
-        note: "Budget-friendly first serious washer. Good if you want local pickup and a lower upfront cost. I'd consider this if you're starting lean and need to get working fast.",
+        approxPrice: '≈$849',
+        note: "Budget-friendly first serious washer if you want to take washing seriously. I ran one of these after messing around with a 2 GPM electric machine and used it for a full year before upgrading.",
         url: 'https://www.harborfreight.com/4400-psi-42-gpm-13-hp-420cc-commercial-duty-pressure-washer-epa-71102.html',
         badge: 'no-commission',
       },
       {
         title: 'Canpump Belt Drive 5 GPM Pressure Washer — 13 HP Loncin',
-        approxPrice: '≈$1,290–$1,390',
-        note: 'My stronger pick if you want to start closer to a professional setup. 5 GPM helps you work faster, and belt drive is a better direction if you plan to build a trailer or skid setup.',
+        approxPrice: '≈$1,290',
+        note: "Stronger pick if you want a prebuilt skid for a trailer or truck skid build. I've ran Canpump pumps on all my machines and can strongly recommend them, especially their customer support team.",
         url: 'https://www.canpump.com/canpump-belt-drive-pressure-washer-13-hp-loncin-engine-triplex-pump/?ref=qraopqpr',
         badge: 'canpump',
       },
@@ -69,30 +69,37 @@ const beginnerBuyOrder: BuyOrderItem[] = [
   {
     num: 2,
     title: '16–21 Inch Surface Cleaner',
-    summaryPrice: '≈$230–$390',
+    summaryPrice: '≈$170–$390',
     description:
       'This is what makes flatwork profitable. Wand-cleaning an entire driveway is slow. A surface cleaner lets you clean driveways, patios, and sidewalks faster and more consistently.',
     picks: [
       {
-        title: 'Canpump 21 Inch Stainless Steel Surface Cleaner',
-        approxPrice: '≈$350-ish',
-        note: "My bigger surface cleaner pick for a 5 GPM setup. Better for production work, driveways, and larger concrete areas.",
-        url: 'https://www.canpump.com/canpump-stainless-steel-surface-cleaner-4000-psi/?ref=qraopqpr',
-        badge: 'canpump',
+        title: '16.5 Inch Stainless Steel Surface Cleaner',
+        approxPrice: '≈$170',
+        note: 'Good pick if your machine is closer to or below 4 GPM. A decent rule of thumb is about 4 inches of surface cleaner for every 1 GPM of flow, so smaller machines usually do better with a smaller surface cleaner.',
+        url: 'https://www.amazon.com/dp/B0D83BZDMG?tag=maxpressure45-20',
+        badge: 'amazon',
       },
       {
-        title: '18 Inch WOJET Surface Cleaner',
-        approxPrice: '≈$230–$265',
-        note: "Good smaller option for a 4 GPM beginner setup. Easier to handle and a better match if you're not running a higher-flow machine yet.",
-        url: 'https://www.amazon.com/dp/REPLACE-WOJET-ASIN?tag=maxpressure45-20',
+        title: 'WOJET 18 Inch Surface Cleaner',
+        approxPrice: '≈$229',
+        note: 'This is the surface cleaner I started on after moving past the little attachable homeowner-style ones. Good middle option for a beginner 4 GPM setup.',
+        url: 'https://www.amazon.com/dp/B079BDG12J?tag=maxpressure45-20',
         badge: 'amazon',
+      },
+      {
+        title: 'Canpump 21 Inch Stainless Steel Surface Cleaner',
+        approxPrice: '≈$350-ish',
+        note: 'I run this on my 5 GPM machine and it works great. Better fit once you have more flow and want to move faster on driveways and bigger concrete.',
+        url: 'https://www.canpump.com/canpump-stainless-steel-surface-cleaner-4000-psi/?ref=qraopqpr',
+        badge: 'canpump',
       },
     ],
   },
   {
     num: 3,
     title: '100–200 Ft High Pressure Hose',
-    summaryPrice: '≈$70–$190',
+    summaryPrice: '≈$93–$140',
     description:
       "Extra hose saves time because you don't have to drag the pressure washer around every corner of the house. For paid jobs, 100–200 ft of hose makes you look and work more professionally.",
     picks: [
@@ -103,20 +110,34 @@ const beginnerBuyOrder: BuyOrderItem[] = [
         url: 'https://www.amazon.com/dp/B0C69298VP?tag=maxpressure45-20',
         badge: 'amazon',
       },
+      {
+        title: 'POHIR Black High Pressure Hose',
+        approxPrice: '≈$93',
+        note: "Cheaper POHIR hose option if you're trying to keep the starting budget lower. Still verify length, PSI rating, and fittings before ordering.",
+        url: 'https://www.amazon.com/dp/B094Z7SHPY?tag=maxpressure45-20',
+        badge: 'amazon',
+      },
     ],
   },
   {
     num: 4,
     title: 'Ball Valve and Quick Connects',
-    summaryPrice: '≈$50–$90',
+    summaryPrice: '≈$30–$60',
     description:
-      'A ball valve is one of the first upgrades that makes your setup feel professional. It lets you control water flow and swap from gun to surface cleaner faster without walking back to the machine every time.',
+      "A ball valve lets you turn your machine's water flow on and off at the end of the hose so you can swap attachments easily without walking back to the pressure washer every time.",
     picks: [
       {
         title: 'MTM Hydro DN10 Ball Valve',
-        approxPrice: '≈$50–$90',
-        note: "This is the style of ball valve I'd want in a beginner setup. Make sure your fittings match your hose, gun, and surface cleaner setup. Keep extra O-rings around because quick connects will leak eventually.",
+        approxPrice: '≈$60',
+        note: "Higher quality ball valve option. This is the style of upgrade that makes switching between your gun, surface cleaner, and other attachments way smoother.",
         url: 'https://www.amazon.com/dp/B07LCSWL4Y?tag=maxpressure45-20',
+        badge: 'amazon',
+      },
+      {
+        title: 'M MINGLE Ball Valve with Quick Connect Attachments',
+        approxPrice: '≈$30',
+        note: 'Cheaper beginner option that already comes with attachments. Good if you want a simple starter setup without piecing together every fitting separately.',
+        url: 'https://www.amazon.com/dp/B0H4FS44L4?tag=maxpressure45-20',
         badge: 'amazon',
       },
     ],
@@ -126,7 +147,7 @@ const beginnerBuyOrder: BuyOrderItem[] = [
     title: 'Downstream Injector',
     summaryPrice: '≈$16–$26',
     description:
-      'A downstream injector lets you apply house wash mix through your pressure washer line. This is the simple beginner way to start soft washing siding before you overcomplicate your setup.',
+      "A downstream injector is extremely efficient for house washing. You drop the intake tube into 10–12.5% bleach/SH, connect the other end into the injector, and it automatically pulls a diluted mix through your pressure washer line. With the right injector/nozzle setup, this can give you the rough 1–2% blend needed for most vinyl house washes.",
     picks: [
       {
         title: 'Canpump Adjustable Chemical Injector — 5 GPM / 2.1 mm',
@@ -158,20 +179,34 @@ const beginnerBuyOrder: BuyOrderItem[] = [
         url: 'https://www.amazon.com/dp/B09RV52WGP?tag=maxpressure45-20',
         badge: 'amazon',
       },
+      {
+        title: 'JOEJET Shooter Tip',
+        approxPrice: '≈$25',
+        note: 'Shooter tips help you reach higher sections from the ground. You can also downstream with a shooter tip, which makes it useful for applying house wash mix higher up without needing a ladder.',
+        url: 'https://www.amazon.com/dp/B0CYSWS346?tag=maxpressure45-20',
+        badge: 'amazon',
+      },
     ],
   },
   {
     num: 7,
-    title: 'X-Jet Kit',
-    summaryPrice: '≈$180',
+    title: 'X-Jet Kit / DS Twist',
+    summaryPrice: '≈$80–$180',
     description:
-      "An X-Jet is one of the easiest ways for a beginner to get into house washing because it lets you apply mix without relying only on your downstream injector. It is simple, portable, and useful for reaching higher areas or troubleshooting when an injector does not pull well. Long-term, I'd still learn downstreaming and eventually dedicated soft wash systems, but an X-Jet can get you washing houses faster.",
+      "An X-Jet is one of the easiest ways for a beginner to get into house washing because it can pull a stronger mix through the barb and spray higher without relying only on a downstream injector. The DS Twist gives you a similar high-reach effect while still downstreaming chemical through the injector shown earlier. In general, the X-Jet can pull a higher percentage, but the DS Twist can still pull enough chemical for a lot of normal house washing when your downstream setup is dialed in.",
     picks: [
       {
         title: 'X-Jet Adjustable Long Range Nozzle Kit',
         approxPrice: '≈$180',
-        note: "Good fit for 4–4.5 GPM beginner machines. Make sure you buy the correct kit/nozzle sizing for your machine's GPM.",
+        note: "Good fit for 4–4.5 GPM beginner machines. The X-Jet can pull a stronger mix through the barb, which makes it useful when you want an easy way to apply house wash mix without depending only on downstreaming.",
         url: 'https://www.amazon.com/dp/B071RR8M91?tag=maxpressure45-20',
+        badge: 'amazon',
+      },
+      {
+        title: 'DS Twist Downstream Shooter Nozzle',
+        approxPrice: '≈$80',
+        note: 'This is basically the downstreaming-style version of the X-Jet idea. It is meant to be used with a downstream injector so you can reach higher areas while still pulling chemical through your normal downstream setup.',
+        url: 'https://www.amazon.com/dp/B088ZV5DDX?tag=maxpressure45-20',
         badge: 'amazon',
       },
     ],
@@ -266,8 +301,8 @@ const badgeConfig: Record<Badge, { label: string; className: string }> = {
     className: 'bg-green-900/50 text-green-300 border border-green-700/50',
   },
   amazon: {
-    label: 'Amazon paid link',
-    className: 'bg-orange-900/40 text-orange-300 border border-orange-700/40',
+    label: 'Amazon Partner link',
+    className: 'bg-green-900/30 text-green-400/80 border border-green-700/30',
   },
 }
 
@@ -351,7 +386,7 @@ const starterSetup = [
   'Ball valve and quick connects',
   'Downstream injector',
   'J-rod / shooter tips',
-  'X-Jet kit',
+  'X-Jet kit / DS Twist',
   'PPE and safety gear',
   'Pump sprayer',
   'Hose reel / storage upgrades',
@@ -493,7 +528,7 @@ export default function BeginnerSetupPage() {
                 </summary>
 
                 <div className="px-5 pb-6 pt-1 border-t border-slate-700/50">
-                  <p className="text-slate-300 text-sm leading-relaxed mb-6">{item.description}</p>
+                  <p className="text-slate-100 text-sm leading-relaxed mb-6">{item.description}</p>
 
                   <p className="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-3">
                     My picks
