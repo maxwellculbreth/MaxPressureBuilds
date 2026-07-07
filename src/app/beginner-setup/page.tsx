@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: "What I'd Buy Again Starting a Pressure Washing Business",
@@ -269,52 +270,81 @@ const starterSetup = [
 export default function BeginnerSetupPage() {
   return (
     <>
+      {/* Minimal landing page header */}
+      <header className="sticky top-0 z-50 bg-slate-950/95 backdrop-blur border-b border-slate-800">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/media/logo/TRANSPARENTLOGO.png"
+              alt="Max Pressure Equipment"
+              width={36}
+              height={36}
+              className="object-contain"
+            />
+            <div>
+              <div className="text-white font-bold text-xs leading-tight tracking-wide uppercase">
+                Max Pressure Equipment
+              </div>
+              <div className="text-blue-400 text-xs leading-tight">
+                Beginner Pressure Washing Gear List
+              </div>
+            </div>
+          </div>
+          <a
+            href="https://www.tiktok.com/@maxpressure"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-400 hover:text-white text-xs font-medium transition-colors"
+          >
+            @maxpressure
+          </a>
+        </div>
+      </header>
+
       {/* Hero */}
       <section
-        className="relative bg-slate-950 min-h-[80vh] flex items-center"
+        className="relative bg-slate-950"
         style={{
           backgroundImage:
             'radial-gradient(circle at 1px 1px, rgba(148,163,184,0.07) 1px, transparent 0)',
           backgroundSize: '32px 32px',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900 pointer-events-none" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-6">
-              <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
-              <span className="text-blue-400 text-xs font-medium tracking-wide uppercase">
-                From Max Pressure — Built on Real Experience
-              </span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight tracking-tight mb-6">
-              The Gear I&apos;d Buy Again If I Started Pressure Washing{' '}
-              <span className="text-blue-400">From Scratch</span>
-            </h1>
-            <p className="text-lg text-slate-300 leading-relaxed mb-8 max-w-2xl">
-              I wasted money figuring out what worked. This is the simple beginner setup I&apos;d
-              recommend after building Max Pressure from the ground up — focused on getting paid
-              jobs done without overbuilding too early.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="#buy-order"
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors text-sm"
-              >
-                Shop the Starter Setup
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-              <a
-                href="https://www.tiktok.com/@maxpressure"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border border-slate-600 hover:border-slate-400 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors text-sm"
-              >
-                Ask Me About a Setup
-              </a>
-            </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900 pointer-events-none" />
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+          <div className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-5">
+            <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+            <span className="text-blue-400 text-xs font-medium tracking-wide uppercase">
+              From Max Pressure — Built on Real Experience
+            </span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight tracking-tight mb-4">
+            The Gear I&apos;d Buy Again If I Started Pressure Washing{' '}
+            <span className="text-blue-400">From Scratch</span>
+          </h1>
+          <p className="text-base text-slate-300 leading-relaxed mb-7 max-w-2xl">
+            I wasted money figuring out what worked. This is the simple beginner setup I&apos;d
+            recommend after building Max Pressure from the ground up — focused on getting paid
+            jobs done without overbuilding too early.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="#buy-order"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
+            >
+              Shop the Starter Setup
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <a
+              href="https://www.tiktok.com/@maxpressure"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-slate-600 hover:border-slate-400 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
+            >
+              Ask Me About a Setup
+            </a>
           </div>
         </div>
       </section>

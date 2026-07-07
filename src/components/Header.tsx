@@ -18,6 +18,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
 
+  if (pathname === '/beginner-setup') return null
+
   return (
     <header className="bg-slate-950 border-b border-slate-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
