@@ -23,11 +23,13 @@ interface Pick {
   note: string
   url: string
   badge: Badge
+  approxPrice: string
 }
 
 interface BuyOrderItem {
   num: number
   title: string
+  summaryPrice: string
   description: string
   picks: Pick[]
 }
@@ -36,17 +38,20 @@ const beginnerBuyOrder: BuyOrderItem[] = [
   {
     num: 1,
     title: '4–5 GPM Pressure Washer',
+    summaryPrice: '≈$849–$1,390',
     description:
       "This is the first real decision. If you're trying to make money, I would skip tiny electric units and start with a serious gas machine. A 4–5 GPM unit is enough for beginner residential house washes, driveways, patios, and sidewalks without jumping straight into a huge trailer build.",
     picks: [
       {
         title: 'Harbor Freight Predator 4400 PSI / 4.2 GPM Commercial Duty Pressure Washer',
+        approxPrice: '≈$849.99',
         note: "Budget-friendly first serious washer. Good if you want local pickup and a lower upfront cost. I'd consider this if you're starting lean and need to get working fast.",
         url: 'https://www.harborfreight.com/4400-psi-42-gpm-13-hp-420cc-commercial-duty-pressure-washer-epa-71102.html',
         badge: 'no-commission',
       },
       {
         title: 'Canpump Belt Drive 5 GPM Pressure Washer — 13 HP Loncin',
+        approxPrice: '≈$1,290–$1,390',
         note: 'My stronger pick if you want to start closer to a professional setup. 5 GPM helps you work faster, and belt drive is a better direction if you plan to build a trailer or skid setup.',
         url: 'https://www.canpump.com/canpump-belt-drive-pressure-washer-13-hp-loncin-engine-triplex-pump/?ref=qraopqpr',
         badge: 'canpump',
@@ -56,17 +61,20 @@ const beginnerBuyOrder: BuyOrderItem[] = [
   {
     num: 2,
     title: '16–21 Inch Surface Cleaner',
+    summaryPrice: '≈$230–$390',
     description:
       'This is what makes flatwork profitable. Wand-cleaning an entire driveway is slow. A surface cleaner lets you clean driveways, patios, and sidewalks faster and more consistently.',
     picks: [
       {
         title: 'Canpump 21 Inch Stainless Steel Surface Cleaner',
+        approxPrice: '≈$350-ish',
         note: "My bigger surface cleaner pick for a 5 GPM setup. Better for production work, driveways, and larger concrete areas.",
         url: 'https://www.canpump.com/canpump-stainless-steel-surface-cleaner-4000-psi/?ref=qraopqpr',
         badge: 'canpump',
       },
       {
         title: '18 Inch WOJET Surface Cleaner',
+        approxPrice: '≈$230–$265',
         note: "Good smaller option for a 4 GPM beginner setup. Easier to handle and a better match if you're not running a higher-flow machine yet.",
         url: 'https://www.amazon.com/dp/REPLACE-WOJET-ASIN?tag=maxpressure45-20',
         badge: 'amazon',
@@ -76,11 +84,13 @@ const beginnerBuyOrder: BuyOrderItem[] = [
   {
     num: 3,
     title: '100–200 Ft High Pressure Hose',
+    summaryPrice: '≈$70–$190',
     description:
       "Extra hose saves time because you don't have to drag the pressure washer around every corner of the house. For paid jobs, 100–200 ft of hose makes you look and work more professionally.",
     picks: [
       {
         title: 'POHIR Blue High Pressure Hose',
+        approxPrice: '≈$140-ish',
         note: 'Good beginner-friendly blue pressure hose option. Before ordering, verify the length, fitting size, PSI rating, and whether you need 3/8 quick connects for your setup.',
         url: 'https://www.amazon.com/dp/B0C69298VP?tag=maxpressure45-20',
         badge: 'amazon',
@@ -90,11 +100,13 @@ const beginnerBuyOrder: BuyOrderItem[] = [
   {
     num: 4,
     title: 'Ball Valve and Quick Connects',
+    summaryPrice: '≈$50–$90',
     description:
       'A ball valve is one of the first upgrades that makes your setup feel professional. It lets you control water flow and swap from gun to surface cleaner faster without walking back to the machine every time.',
     picks: [
       {
         title: 'MTM Hydro DN10 Ball Valve',
+        approxPrice: '≈$50–$90',
         note: "This is the style of ball valve I'd want in a beginner setup. Make sure your fittings match your hose, gun, and surface cleaner setup. Keep extra O-rings around because quick connects will leak eventually.",
         url: 'https://www.amazon.com/dp/B07LCSWL4Y?tag=maxpressure45-20',
         badge: 'amazon',
@@ -104,17 +116,20 @@ const beginnerBuyOrder: BuyOrderItem[] = [
   {
     num: 5,
     title: 'Downstream Injector',
+    summaryPrice: '≈$16–$26',
     description:
       'A downstream injector lets you apply house wash mix through your pressure washer line. This is the simple beginner way to start soft washing siding before you overcomplicate your setup.',
     picks: [
       {
         title: 'Canpump Adjustable Chemical Injector — 5 GPM / 2.1 mm',
+        approxPrice: '≈$25.60',
         note: "My pick for a 5 GPM setup. Match your injector/orifice to your machine's flow so it pulls chemical properly.",
         url: 'https://www.canpump.com/adjustable-chemical-injector-4500-psi-5-us-gpm-2-1-mm-orifice-qc-socket-inlet-general-pump-style/?ref=qraopqpr',
         badge: 'canpump',
       },
       {
         title: 'General Pump Chemical Injector 100775',
+        approxPrice: '≈$16–$31',
         note: "Common downstream injector option. Good to test if you're building a simple beginner house wash setup. Hose length, injector size, and nozzle choice can affect whether it pulls well.",
         url: 'https://www.amazon.com/dp/B01JB6D23K?tag=maxpressure45-20',
         badge: 'amazon',
@@ -124,11 +139,13 @@ const beginnerBuyOrder: BuyOrderItem[] = [
   {
     num: 6,
     title: 'J-Rod / Shooter Tips',
+    summaryPrice: '≈$45–$55',
     description:
       "A J-rod keeps your main soap and rinse tips together so you're not digging through loose nozzles on every job. This is especially useful for house washing.",
     picks: [
       {
         title: 'Jariko J-Rod Nozzle Kit — 4 GPM',
+        approxPrice: '≈$50-ish',
         note: 'Good starter J-rod for a 4 GPM machine. If you move to 5 GPM, make sure your nozzles are sized correctly for your machine.',
         url: 'https://www.amazon.com/dp/B09RV52WGP?tag=maxpressure45-20',
         badge: 'amazon',
@@ -138,23 +155,27 @@ const beginnerBuyOrder: BuyOrderItem[] = [
   {
     num: 7,
     title: 'PPE and Safety Gear',
+    summaryPrice: '≈$15–$55',
     description:
       "Do not skip safety gear. When you're working with house wash mix, bleach, surfactant, or hot chemical batches, you need eye protection, gloves, and respiratory protection where appropriate.",
     picks: [
       {
         title: 'Clear Safety Goggles',
+        approxPrice: '≈$16',
         note: 'Basic eye protection for mixing, spraying, and rinsing around chemicals. Eye protection is cheap compared to a chemical splash.',
         url: 'https://www.amazon.com/dp/B0G7YLYCNB?tag=maxpressure45-20',
         badge: 'amazon',
       },
       {
         title: 'Disposable Nitrile Gloves',
+        approxPrice: '≈$17',
         note: 'Useful when mixing chemicals, handling injectors, or dealing with stronger batches. Keep a box on the truck.',
         url: 'https://www.amazon.com/dp/B0C3SSXL4K?tag=maxpressure45-20',
         badge: 'amazon',
       },
       {
         title: '3M Reusable Respirator',
+        approxPrice: '≈$55',
         note: "Useful baseline respirator option for chemical work, but users should verify the cartridges are rated for the exact chemicals they're using by checking the SDS and manufacturer specs. Never mix chemicals and avoid breathing fumes.",
         url: 'https://www.amazon.com/dp/B01H0S90QE?tag=maxpressure45-20',
         badge: 'amazon',
@@ -164,17 +185,20 @@ const beginnerBuyOrder: BuyOrderItem[] = [
   {
     num: 8,
     title: 'Pump Sprayer',
+    summaryPrice: '≈$14–$43',
     description:
       'A pump sprayer is useful for spot treating, applying small chemical batches, touching up problem areas, and handling small jobs without pulling out a full soft wash system.',
     picks: [
       {
         title: 'Chapin 1 Gallon Bleach/Disinfectant Sprayer',
+        approxPrice: '≈$14.49',
         note: 'Good small sprayer for bleach-compatible spot treatment and simple beginner use.',
         url: 'https://www.amazon.com/dp/B00295QD96?tag=maxpressure45-20',
         badge: 'amazon',
       },
       {
         title: 'Chapin 2 Gallon Sprayer Two Pack',
+        approxPrice: '≈$43',
         note: "Good if you want extra capacity or want separate sprayers for different uses. Label your sprayers and don't cross-contaminate chemicals.",
         url: 'https://www.amazon.com/dp/B0C7LY7NV4?tag=maxpressure45-20',
         badge: 'amazon',
@@ -184,17 +208,20 @@ const beginnerBuyOrder: BuyOrderItem[] = [
   {
     num: 9,
     title: 'Hose Reel / Storage Upgrades',
+    summaryPrice: '≈$120–$150',
     description:
       "Hose reels are not required on day one, but they make you look cleaner, save time, and help keep your trailer or skid from becoming a mess.",
     picks: [
       {
         title: 'VEVOR Wall Mounted Garden Hose Reel',
+        approxPrice: '≈$123',
         note: "Cheap garden hose reel option I'd consider bolting onto a trailer or skid. Verify fitting size and mounting before ordering.",
         url: 'https://www.amazon.com/dp/B0F5NL3SC8?tag=maxpressure45-20',
         badge: 'amazon',
       },
       {
         title: 'MINGLE High Pressure Hose Reel',
+        approxPrice: '≈$145-ish',
         note: 'Cheap high pressure hose reel similar to the type I started with. Make sure the pressure rating, hose capacity, and fittings match your setup.',
         url: 'https://www.amazon.com/dp/B09Q8PPMPK?tag=maxpressure45-20',
         badge: 'amazon',
@@ -352,11 +379,16 @@ export default function BeginnerSetupPage() {
       {/* Affiliate Disclosure */}
       <div className="bg-slate-800 border-b border-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <p className="text-slate-400 text-sm text-center">
-            <span className="text-slate-300 font-medium">Disclosure:</span> As an Amazon Associate
-            I earn from qualifying purchases. Some links on this page are affiliate links, meaning I
-            may earn a commission at no extra cost to you.
-          </p>
+          <div className="text-slate-400 text-sm text-center space-y-1">
+            <p>
+              <span className="text-slate-300 font-medium">Disclosure:</span> As an Amazon Associate
+              I earn from qualifying purchases. Some links on this page are affiliate links, meaning I
+              may earn a commission at no extra cost to you.
+            </p>
+            <p className="text-slate-500 text-xs">
+              Approximate budget numbers are estimates and may change. Click through for current pricing and availability.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -381,7 +413,10 @@ export default function BeginnerSetupPage() {
                   <span className="flex-shrink-0 w-8 h-8 bg-blue-600/20 border border-blue-500/30 text-blue-400 text-sm font-bold rounded-full flex items-center justify-center">
                     {item.num}
                   </span>
-                  <span className="text-white font-semibold flex-1">{item.title}</span>
+                  <div className="flex-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-3 min-w-0">
+                    <span className="text-white font-semibold">{item.title}</span>
+                    <span className="text-slate-400 text-xs font-mono flex-shrink-0">{item.summaryPrice}</span>
+                  </div>
                   <svg
                     className="w-4 h-4 text-slate-400 flex-shrink-0 transition-transform duration-200 group-open:rotate-180"
                     fill="none"
@@ -407,9 +442,14 @@ export default function BeginnerSetupPage() {
                           className="bg-slate-900/60 border border-slate-700/40 rounded-lg p-4"
                         >
                           <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
-                            <span className="text-white font-semibold text-sm leading-snug flex-1">
-                              {pick.title}
-                            </span>
+                            <div className="flex-1 min-w-0">
+                              <span className="text-white font-semibold text-sm leading-snug block">
+                                {pick.title}
+                              </span>
+                              <span className="inline-block mt-1 text-xs text-slate-400 bg-slate-800 border border-slate-600/40 rounded px-2 py-0.5 font-mono">
+                                Approx. {pick.approxPrice}
+                              </span>
+                            </div>
                             <span
                               className={`flex-shrink-0 text-xs font-medium px-2 py-0.5 rounded-full ${badge.className}`}
                             >
