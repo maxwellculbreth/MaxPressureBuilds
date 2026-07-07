@@ -567,21 +567,6 @@ export default function BeginnerSetupPage() {
         </div>
       </section>
 
-      {/* Affiliate Disclosure */}
-      <div className="bg-slate-800 border-b border-slate-700/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="text-slate-400 text-sm text-center space-y-1">
-            <p>
-              <span className="text-slate-300 font-medium">Disclosure:</span> As an Amazon Associate
-              I earn from qualifying purchases. Some links on this page are affiliate links, meaning I
-              may earn a commission at no extra cost to you.
-            </p>
-            <p className="text-slate-500 text-xs">
-              Approximate budget numbers are estimates and may change. Click through for current pricing and availability.
-            </p>
-          </div>
-        </div>
-      </div>
 
       {/* Buy Order Accordion */}
       <section id="buy-order" className="bg-slate-900 py-20 md:py-28">
@@ -969,6 +954,13 @@ export default function BeginnerSetupPage() {
           </div>
         </div>
       </section>
+
+      {/* Affiliate Disclosure */}
+      <div className="bg-slate-950 border-t border-slate-800/60 px-4 py-5 text-center">
+        <p className="text-slate-600 text-xs leading-relaxed max-w-xl mx-auto">
+          As an Amazon Associate I earn from qualifying purchases. Some links on this page are affiliate links — I may earn a commission at no extra cost to you. Prices are estimates and may change; click through for current pricing.
+        </p>
+      </div>
     </>
   )
 }
