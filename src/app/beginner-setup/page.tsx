@@ -34,6 +34,14 @@ interface BuyOrderItem {
   picks: Pick[]
 }
 
+interface SoftWashItem {
+  title: string
+  url: string
+  badge: Badge
+  approxPrice: string
+  description: string
+}
+
 const beginnerBuyOrder: BuyOrderItem[] = [
   {
     num: 1,
@@ -154,6 +162,23 @@ const beginnerBuyOrder: BuyOrderItem[] = [
   },
   {
     num: 7,
+    title: 'X-Jet Kit',
+    summaryPrice: '≈$180',
+    description:
+      "An X-Jet is one of the easiest ways for a beginner to get into house washing because it lets you apply mix without relying only on your downstream injector. It is simple, portable, and useful for reaching higher areas or troubleshooting when an injector does not pull well. Long-term, I'd still learn downstreaming and eventually dedicated soft wash systems, but an X-Jet can get you washing houses faster.",
+    picks: [
+      {
+        title: 'Full X-Jet Kit for 4–4.5 GPM Machines',
+        approxPrice: '≈$180',
+        note: "Good fit for 4–4.5 GPM beginner machines. Make sure you buy the correct kit/nozzle sizing for your machine's GPM.",
+        // TODO: Replace USE_PLACEHOLDER_XJET_LINK_FOR_NOW with the real X-Jet Amazon affiliate link/ASIN.
+        url: 'https://www.amazon.com/dp/USE_PLACEHOLDER_XJET_LINK_FOR_NOW?tag=maxpressure45-20',
+        badge: 'amazon',
+      },
+    ],
+  },
+  {
+    num: 8,
     title: 'PPE and Safety Gear',
     summaryPrice: '≈$15–$55',
     description:
@@ -183,7 +208,7 @@ const beginnerBuyOrder: BuyOrderItem[] = [
     ],
   },
   {
-    num: 8,
+    num: 9,
     title: 'Pump Sprayer',
     summaryPrice: '≈$14–$43',
     description:
@@ -206,7 +231,7 @@ const beginnerBuyOrder: BuyOrderItem[] = [
     ],
   },
   {
-    num: 9,
+    num: 10,
     title: 'Hose Reel / Storage Upgrades',
     summaryPrice: '≈$120–$150',
     description:
@@ -249,15 +274,55 @@ const badgeConfig: Record<Badge, { label: string; className: string }> = {
 
 // ─── Other page data ──────────────────────────────────────────────────────────
 
-const softWashItems = [
-  { title: 'Chemical-Resistant Gloves', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-  { title: 'Safety Glasses / Face Shield', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-  { title: 'Respirator or Mask', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-  { title: 'Pump Sprayer', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-  { title: '12V Soft Wash Pump', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-  { title: 'Soft Wash Hose', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-  { title: 'Nozzle Tips', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-  { title: 'Measuring Containers', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
+const softWashItems: SoftWashItem[] = [
+  {
+    title: 'Chemical Resistant Gloves',
+    url: 'https://www.amazon.com/dp/B0C3SSXL4K?tag=maxpressure45-20',
+    badge: 'amazon',
+    approxPrice: '≈$17',
+    description:
+      'Disposable nitrile gloves are a must when mixing or handling house wash chemicals. Keep a box on the truck and replace them often.',
+  },
+  {
+    title: 'Safety Glasses / Clear Goggles',
+    url: 'https://www.amazon.com/dp/B0G7YLYCNB?tag=maxpressure45-20',
+    badge: 'amazon',
+    approxPrice: '≈$16',
+    description:
+      'Eye protection is non-negotiable around bleach, surfactant, wind drift, and rinsing.',
+  },
+  {
+    title: 'Respirator or Mask',
+    url: 'https://www.amazon.com/dp/B01H0S90QE?tag=maxpressure45-20',
+    badge: 'amazon',
+    approxPrice: '≈$55',
+    description:
+      'Useful for chemical work, but verify cartridges against the SDS and manufacturer specs for the exact chemicals you use. Never breathe fumes or mix chemicals.',
+  },
+  {
+    title: 'Pump Sprayer',
+    url: 'https://www.amazon.com/dp/B00295QD96?tag=maxpressure45-20',
+    badge: 'amazon',
+    approxPrice: '≈$14.49',
+    description:
+      'Good for spot treating, small chemical batches, and touching up problem areas without pulling out a full soft wash system.',
+  },
+  {
+    title: '12V Soft Wash Pump — Remco Fatboy 7 GPM',
+    url: 'https://www.amazon.com/dp/B00QB1IR6Q?tag=maxpressure45-20',
+    badge: 'amazon',
+    approxPrice: '≈$180–$230',
+    description:
+      "This is the style of 12V pump I use for soft washing. Good for a simple dedicated soft wash setup when you're ready to move beyond only downstreaming or X-Jet use.",
+  },
+  {
+    title: 'Soft Wash Hose — Flexzilla 1/2 Inch Hose',
+    url: 'https://www.amazon.com/dp/B004IQWNNE?tag=maxpressure45-20',
+    badge: 'amazon',
+    approxPrice: '≈$45–$80',
+    description:
+      'This is technically Flexzilla air hose, but it can work fine as beginner soft wash hose. Verify size, length, fittings, and chemical compatibility before building around it.',
+  },
 ]
 
 const organizeItems = [
@@ -281,12 +346,13 @@ const wouldntBuy = [
 ]
 
 const starterSetup = [
-  '4–5 GPM gas pressure washer',
+  '4–5 GPM pressure washer',
   '16–21 inch surface cleaner',
-  '100–200 ft pressure hose',
+  '100–200 ft high pressure hose',
   'Ball valve and quick connects',
   'Downstream injector',
   'J-rod / shooter tips',
+  'X-Jet kit',
   'PPE and safety gear',
   'Pump sprayer',
   'Hose reel / storage upgrades',
@@ -501,7 +567,7 @@ export default function BeginnerSetupPage() {
               This list is short but non-negotiable. Don&apos;t skip the safety equipment.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
             {softWashItems.map((item) => (
               <a
                 key={item.title}
@@ -510,13 +576,23 @@ export default function BeginnerSetupPage() {
                 rel="noopener noreferrer"
                 className="group bg-slate-800 border border-slate-700/50 hover:border-blue-500/40 rounded-xl p-5 transition-all flex flex-col gap-3"
               >
-                <span className="text-white font-semibold text-sm group-hover:text-blue-300 transition-colors">
-                  {item.title}
-                </span>
-                <span className="text-blue-400 text-xs font-medium">
-                  Check on Amazon →{' '}
-                  <span className="text-slate-500 font-normal">paid link</span>
-                </span>
+                <div className="flex items-start justify-between gap-2">
+                  <span className="text-white font-semibold text-sm group-hover:text-blue-300 transition-colors flex-1">
+                    {item.title}
+                  </span>
+                  <span className={`flex-shrink-0 text-xs font-medium px-2 py-0.5 rounded-full ${badgeConfig[item.badge].className}`}>
+                    {badgeConfig[item.badge].label}
+                  </span>
+                </div>
+                <p className="text-slate-400 text-xs leading-relaxed flex-1">{item.description}</p>
+                <div className="flex items-center justify-between pt-1">
+                  <span className="text-xs text-slate-400 bg-slate-900/60 border border-slate-600/40 rounded px-2 py-0.5 font-mono">
+                    Approx. {item.approxPrice}
+                  </span>
+                  <span className="text-blue-400 text-xs font-medium group-hover:text-blue-300 transition-colors">
+                    View on Amazon →
+                  </span>
+                </div>
               </a>
             ))}
           </div>
@@ -528,7 +604,7 @@ export default function BeginnerSetupPage() {
               <p className="text-amber-200 text-sm leading-relaxed">
                 <span className="font-semibold text-amber-300">Heads up:</span> Soft washing is
                 where beginners can mess things up fast. Learn your ratios, protect plants, rinse
-                properly, and use PPE.
+                properly, use PPE, and check SDS/manufacturer guidance before spraying chemicals.
               </p>
             </div>
           </div>
