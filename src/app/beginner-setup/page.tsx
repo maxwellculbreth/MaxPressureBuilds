@@ -414,9 +414,9 @@ const wouldntBuy = [
 
 interface PumpCard {
   title: string
-  image: string | null
+  image: string
   url: string
-  approxPrice: string
+  price: string
   specs: string[]
   note: string
 }
@@ -424,43 +424,51 @@ interface PumpCard {
 const customBuildPumps: PumpCard[] = [
   {
     title: 'Canpump CE 3650 GB/GBP — 3600 PSI @ 4.4 GPM Gear Driven Pump',
-    image: '/images/canpump-pumps/canpump-4-4gpm-gearbox.png',
+    image: '/media/pumps/4.4GPM-Transparent.png',
     url: 'https://www.canpump.com/canpump-3600-psi-4-4-us-gpm-1-in-shaft-pressure-washer-pump-w-gearbox/?ref=qraopqpr',
-    approxPrice: '≈$420',
+    price: '$420',
     specs: ['3600 PSI', '4.4 GPM', '1-inch shaft', 'Gearbox reduction system'],
-    note: "Good upgrade-style pump if you want a gear-driven setup around the 4–4.5 GPM range. I'd look at this if you're building something more serious than a basic homeowner machine but don't need huge flow yet.",
+    note: "Good gear-driven option around the 4–4.5 GPM range. I'd look at this if you want something more serious than a basic homeowner setup but don't need huge flow yet.",
   },
   {
     title: 'Canpump CF 3257 G — 3200 PSI @ 5.7 GPM Direct Drive Pump',
-    image: '/images/canpump-pumps/canpump-5-7gpm-direct-drive.png',
+    image: '/media/pumps/5.7GPM-transparent.png',
     url: 'https://www.canpump.com/canpump-3200-psi-5-7-us-gpm-1-in-shaft-pressure-washer-pump/?ref=qraopqpr',
-    approxPrice: '≈$285',
+    price: '$285',
     specs: ['3200 PSI', '5.7 GPM', '1-inch shaft', 'Direct drive'],
-    note: "Strong budget flow for the money, but remember direct-drive pumps can be more picky about water supply. Make sure your inlet plumbing and water feed are dialed if you're trying to pull from a buffer tank.",
+    note: "Strong flow for the money, but remember direct-drive pumps can be pickier about water supply. Make sure your inlet plumbing and water feed are dialed if you're trying to pull from a buffer tank.",
   },
   {
-    title: 'Canpump CT 3510 GB — 3500 PSI @ 9.2 GPM Gear Driven Pump',
-    image: '/images/canpump-pumps/canpump-9-2gpm-gearbox.png',
-    url: 'https://www.canpump.com/canpump-ct-3510-gb-3500-psi-9-2-us-gpm-1-in-shaft-industrial-high-pressure-pump-w-gearbox/?ref=qraopqpr',
-    approxPrice: '≈$820',
-    specs: ['3500 PSI', '9.2 GPM', '1-inch shaft', 'Gearbox reduction system'],
-    note: "This is big flow. Not what I'd tell a random beginner to buy first, but if you're building a serious rig, 9.2 GPM is where production speed gets real. Make sure your plumbing, tank, bypass, unloader, and engine setup are ready for it.",
+    title: 'Canpump CF 3647 G — 3600 PSI @ 4.7 GPM Direct Drive Pump',
+    image: '/media/pumps/4.7GPM-transparent.png',
+    url: 'https://www.canpump.com/canpump-3600-psi-4-7-us-gpm-1-in-shaft-pressure-washer-pump/?ref=qraopqpr',
+    price: '$235',
+    specs: ['3600 PSI', '4.7 GPM', '1-inch shaft', 'Direct drive'],
+    note: "Solid lower-cost direct-drive pump option if you're trying to repair or build a smaller machine. Just make sure the mounting, shaft, unloader, and inlet/outlet plumbing match what you're building.",
+  },
+  {
+    title: 'Canpump CF 4040 G — 4000 PSI @ 4 GPM Direct Drive Pump',
+    image: '/media/pumps/4GPM-Transparent.png',
+    url: 'https://www.canpump.com/canpump-cf-4040-g-4000-psi-4-us-gpm-1-in-shaft-pressure-washer-pump/?ref=qraopqpr',
+    price: '$340',
+    specs: ['4000 PSI', '4.0 GPM', '1-inch shaft', 'Direct drive'],
+    note: "Basic replacement/custom build pump for a 4 GPM style setup. Good if you're trying to build or repair a smaller machine, but still make sure the shaft, mounting, unloader, and plumbing match your engine/setup.",
   },
   {
     title: 'Canpump CT 4066 GB — 4000 PSI @ 6.61 GPM Gear Driven Pump',
-    image: '/images/canpump-pumps/canpump-6-6gpm-gearbox.png',
+    image: '/media/pumps/6.6GPM-Transparent.png',
     url: 'https://www.canpump.com/canpump-ct-4066-gb-4000-psi-6-61-us-gpm-1-in-shaft-pressure-washer-pump-gearbox/?ref=qraopqpr',
-    approxPrice: '≈$640',
+    price: '$640',
     specs: ['4000 PSI', '6.61 GPM', '1-inch shaft', 'Gearbox reduction system'],
     note: "Good middle ground between a beginner 4–5 GPM machine and a huge 9+ GPM build. This is the kind of pump I'd consider for a serious trailer/skid upgrade.",
   },
   {
-    title: 'Canpump CF 4040 G — 4000 PSI @ 4 GPM Direct Drive Pump',
-    image: null,
-    url: 'https://www.canpump.com/canpump-cf-4040-g-4000-psi-4-us-gpm-1-in-shaft-pressure-washer-pump/?ref=qraopqpr',
-    approxPrice: '≈$340',
-    specs: ['4000 PSI', '4.0 GPM', '1-inch shaft', 'Direct drive'],
-    note: "Basic replacement/custom build pump for a 4 GPM style setup. Good if you're trying to build or repair a smaller machine, but still make sure the shaft, mounting, unloader, and plumbing match your engine/setup.",
+    title: 'Canpump CT 3510 GB — 3500 PSI @ 9.2 GPM Gear Driven Pump',
+    image: '/media/pumps/9.2GPM-Transparent.png',
+    url: 'https://www.canpump.com/canpump-ct-3510-gb-3500-psi-9-2-us-gpm-1-in-shaft-industrial-high-pressure-pump-w-gearbox/?ref=qraopqpr',
+    price: '$820',
+    specs: ['3500 PSI', '9.2 GPM', '1-inch shaft', 'Gearbox reduction system'],
+    note: "This is big flow. Not what I'd tell a random beginner to buy first, but if you're building a serious rig, 9.2 GPM is where production speed gets real. Make sure your plumbing, buffer tank, bypass, unloader, and engine setup are ready for it.",
   },
 ]
 
@@ -544,6 +552,17 @@ export default function BeginnerSetupPage() {
             >
               Ask Me About a Setup
             </a>
+          </div>
+
+          <div className="mt-8 rounded-xl overflow-hidden border border-slate-700/40">
+            <Image
+              src="/media/general/beginner-setup-pressurewashing.png"
+              alt="Beginner pressure washing setup in truck bed that helped build Max Pressure"
+              width={900}
+              height={600}
+              className="w-full object-cover max-h-80"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -807,29 +826,59 @@ export default function BeginnerSetupPage() {
               </div>
             </div>
 
-            <div className="bg-slate-800 border border-slate-700/50 rounded-xl px-5 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-              <div>
-                <p className="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-1">
-                  Resource
-                </p>
-                <p className="text-white font-semibold text-sm leading-snug">
-                  How To Install A Horizontal Pressure Washer Pump
-                </p>
-                <p className="text-slate-400 text-xs mt-0.5">Allparts Equipment &amp; Accessories</p>
+            <div className="bg-slate-800 border border-slate-700/50 rounded-xl overflow-hidden divide-y divide-slate-700/50">
+              <div className="px-5 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                  <p className="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-1">
+                    Resource
+                  </p>
+                  <p className="text-white font-semibold text-sm leading-snug">
+                    How To Install A Horizontal Pressure Washer Pump
+                  </p>
+                  <p className="text-slate-400 text-xs mt-0.5">Allparts Equipment &amp; Accessories</p>
+                </div>
+                <a
+                  href="https://youtu.be/eqt--PjCEsE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-shrink-0 inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white font-semibold px-4 py-2.5 rounded-lg transition-colors text-xs whitespace-nowrap"
+                >
+                  <svg className="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778C2.01 8.741 2 12 2 12s.01 3.271.403 4.814a2.504 2.504 0 0 0 1.766 1.763c1.567.43 7.831.423 7.831.423s6.265.007 7.831-.403a2.51 2.51 0 0 0 1.762-1.767C21.99 15.26 22 12 22 12s-.01-3.259-.407-4.797zM10 15V9l5.196 3L10 15z"/>
+                  </svg>
+                  Watch install video
+                </a>
               </div>
-              <a
-                href="https://youtu.be/eqt--PjCEsE"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white font-semibold px-4 py-2.5 rounded-lg transition-colors text-xs whitespace-nowrap"
-              >
-                <svg className="w-3.5 h-3.5 text-red-400" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778C2.01 8.741 2 12 2 12s.01 3.271.403 4.814a2.504 2.504 0 0 0 1.766 1.763c1.567.43 7.831.423 7.831.423s6.265.007 7.831-.403a2.51 2.51 0 0 0 1.762-1.767C21.99 15.26 22 12 22 12s-.01-3.259-.407-4.797zM10 15V9l5.196 3L10 15z"/>
-                </svg>
-                Watch install video
-              </a>
+              <div className="px-5 py-4 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                <div>
+                  <p className="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-1">
+                    Resource
+                  </p>
+                  <p className="text-white font-semibold text-sm leading-snug">
+                    How to Mount a Gearbox to an Engine Shaft
+                  </p>
+                  <p className="text-slate-400 text-xs mt-0.5 max-w-xs">
+                    Useful for understanding the gearbox-to-engine shaft mounting process. Most of these gear-drive pumps already have the gearbox mounted, but you still need to understand shaft size, keyway, alignment, and mounting.
+                  </p>
+                </div>
+                <a
+                  href="https://mpwsr.com/blogs/news/installation-guide-pa-b-18-b-24-b-31-gear-box-assembly-to-machine"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-shrink-0 inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white font-semibold px-4 py-2.5 rounded-lg transition-colors text-xs whitespace-nowrap"
+                >
+                  Read gearbox guide
+                  <svg className="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
+
+          <p className="text-slate-500 text-xs mb-5">
+            Prices shown are listed Canpump prices from when this page was added. Click through to confirm current pricing and availability.
+          </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
             {customBuildPumps.map((pump) => (
@@ -837,24 +886,18 @@ export default function BeginnerSetupPage() {
                 key={pump.url}
                 className="bg-slate-800 border border-slate-700/50 rounded-xl overflow-hidden flex flex-col"
               >
-                {pump.image ? (
-                  <div className="relative h-44 bg-slate-950 flex-shrink-0">
-                    <Image
-                      src={pump.image}
-                      alt={pump.title}
-                      fill
-                      className="object-contain p-4"
-                    />
-                  </div>
-                ) : (
-                  <div className="h-44 bg-slate-950 flex items-center justify-center flex-shrink-0">
-                    <span className="text-slate-600 text-xs">Image coming soon</span>
-                  </div>
-                )}
+                <div className="relative h-44 bg-slate-950 flex-shrink-0">
+                  <Image
+                    src={pump.image}
+                    alt={pump.title}
+                    fill
+                    className="object-contain p-4"
+                  />
+                </div>
                 <div className="p-5 flex flex-col flex-1">
                   <div className="flex flex-wrap gap-2 mb-3">
                     <span className="text-xs text-green-400 bg-slate-900/60 border border-green-700/30 rounded px-2 py-0.5 font-mono">
-                      Approx. {pump.approxPrice}
+                      {pump.price}
                     </span>
                     <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-green-900/50 text-green-300 border border-green-700/50">
                       Canpump partner link
