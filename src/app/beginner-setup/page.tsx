@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
@@ -46,7 +45,7 @@ const beginnerBuyOrder: BuyOrderItem[] = [
   {
     num: 1,
     title: '4–5 GPM Pressure Washer',
-    summaryPrice: '≈$849–$1,390',
+    summaryPrice: '≈$849–$1,290',
     description:
       "This is the first real decision. If you're trying to make money, I would skip tiny electric units and start with a serious gas machine. A 4–5 GPM unit is enough for beginner residential house washes, driveways, patios, and sidewalks without jumping straight into a huge trailer build.",
     picks: [
@@ -68,6 +67,29 @@ const beginnerBuyOrder: BuyOrderItem[] = [
   },
   {
     num: 2,
+    title: 'Short Wands / Guns',
+    summaryPrice: '≈$27–$29',
+    description:
+      'House washing is way easier with a short gun than trying to use a long wand all day. A short gun gives you better control, makes switching attachments easier, and is more comfortable when you\'re walking around a house, rinsing, or using a ball valve setup.',
+    picks: [
+      {
+        title: 'RIDGE WASHER Short Pressure Washer Gun',
+        approxPrice: '≈$27',
+        note: "Good beginner short gun option. The big thing I like is the trigger lock, so you do not have to constantly hold the trigger down the whole time you're washing.",
+        url: 'https://www.amazon.com/dp/B08QHV6FBZ?tag=maxpressure45-20',
+        badge: 'amazon',
+      },
+      {
+        title: 'Canpump High Pressure Spray Gun + Wand Assembly',
+        approxPrice: '≈$29',
+        note: 'Good longer backup wand/gun option to keep around. I still prefer a short gun for most house washing, but having a longer wand as backup is useful.',
+        url: 'https://www.canpump.com/canpump-hi-pressure-spray-gun-wand-assembly-3600-psi/?ref=qraopqpr',
+        badge: 'canpump',
+      },
+    ],
+  },
+  {
+    num: 3,
     title: '16–21 Inch Surface Cleaner',
     summaryPrice: '≈$170–$390',
     description:
@@ -97,7 +119,7 @@ const beginnerBuyOrder: BuyOrderItem[] = [
     ],
   },
   {
-    num: 3,
+    num: 4,
     title: '100–200 Ft High Pressure Hose',
     summaryPrice: '≈$93–$140',
     description:
@@ -120,7 +142,23 @@ const beginnerBuyOrder: BuyOrderItem[] = [
     ],
   },
   {
-    num: 4,
+    num: 5,
+    title: '50–100 Ft Garden Hose',
+    summaryPrice: '≈$69',
+    description:
+      "You need garden hose to feed water from the customer's house spigot into your pressure washer or buffer tank inlet. This is one of those boring pieces of gear that matters a lot because bad garden hose kinks, restricts flow, and slows everything down.",
+    picks: [
+      {
+        title: 'Flexzilla 100 Ft Garden Hose',
+        approxPrice: '≈$69',
+        note: 'Flexzilla is my favorite kink-resistant hose material. I run this style of hose on my builds and reels because it is way easier to work with than stiff cheap garden hose.',
+        url: 'https://www.amazon.com/dp/B0080JA346?tag=maxpressure45-20',
+        badge: 'amazon',
+      },
+    ],
+  },
+  {
+    num: 6,
     title: 'Ball Valve and Quick Connects',
     summaryPrice: '≈$30–$60',
     description:
@@ -143,7 +181,7 @@ const beginnerBuyOrder: BuyOrderItem[] = [
     ],
   },
   {
-    num: 5,
+    num: 7,
     title: 'Downstream Injector',
     summaryPrice: '≈$16–$26',
     description:
@@ -166,9 +204,9 @@ const beginnerBuyOrder: BuyOrderItem[] = [
     ],
   },
   {
-    num: 6,
+    num: 8,
     title: 'J-Rod / Shooter Tips',
-    summaryPrice: '≈$45–$55',
+    summaryPrice: '≈$25–$55',
     description:
       "A J-rod keeps your main soap and rinse tips together so you're not digging through loose nozzles on every job. This is especially useful for house washing.",
     picks: [
@@ -189,7 +227,7 @@ const beginnerBuyOrder: BuyOrderItem[] = [
     ],
   },
   {
-    num: 7,
+    num: 9,
     title: 'X-Jet Kit / DS Twist',
     summaryPrice: '≈$80–$180',
     description:
@@ -212,7 +250,7 @@ const beginnerBuyOrder: BuyOrderItem[] = [
     ],
   },
   {
-    num: 8,
+    num: 10,
     title: 'PPE and Safety Gear',
     summaryPrice: '≈$15–$55',
     description:
@@ -242,7 +280,7 @@ const beginnerBuyOrder: BuyOrderItem[] = [
     ],
   },
   {
-    num: 9,
+    num: 11,
     title: 'Pump Sprayer',
     summaryPrice: '≈$14–$43',
     description:
@@ -265,22 +303,22 @@ const beginnerBuyOrder: BuyOrderItem[] = [
     ],
   },
   {
-    num: 10,
+    num: 12,
     title: 'Hose Reel / Storage Upgrades',
-    summaryPrice: '≈$120–$150',
+    summaryPrice: '≈$87–$105',
     description:
       "Hose reels are not required on day one, but they make you look cleaner, save time, and help keep your trailer or skid from becoming a mess.",
     picks: [
       {
         title: 'VEVOR Wall Mounted Garden Hose Reel',
-        approxPrice: '≈$123',
+        approxPrice: '≈$87',
         note: "Cheap garden hose reel option I'd consider bolting onto a trailer or skid. Verify fitting size and mounting before ordering.",
         url: 'https://www.amazon.com/dp/B0F5NL3SC8?tag=maxpressure45-20',
         badge: 'amazon',
       },
       {
         title: 'MINGLE High Pressure Hose Reel',
-        approxPrice: '≈$145-ish',
+        approxPrice: '≈$105',
         note: 'Cheap high pressure hose reel similar to the type I started with. Make sure the pressure rating, hose capacity, and fittings match your setup.',
         url: 'https://www.amazon.com/dp/B09Q8PPMPK?tag=maxpressure45-20',
         badge: 'amazon',
@@ -359,17 +397,6 @@ const softWashItems: SoftWashItem[] = [
   },
 ]
 
-const organizeItems = [
-  { title: 'Pressure Hose Reel', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-  { title: 'Garden Hose Reel', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-  { title: 'Contractor-Grade Garden Hose', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-  { title: 'Hose Guides / Corner Guards', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-  { title: 'Toolbox or Parts Organizer', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-  { title: 'Spare O-Rings', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-  { title: 'Spare Nozzles', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-  { title: 'Teflon Tape / Thread Sealant', url: 'https://www.amazon.com/dp/REPLACE-ME?tag=maxpressure45-20' },
-]
-
 const wouldntBuy = [
   'Giant trailer build before having customers',
   'Overpriced chemical systems before understanding downstreaming',
@@ -377,19 +404,6 @@ const wouldntBuy = [
   'Random cheap spray guns with bad fittings',
   'Cheap surface cleaners that wobble or leave stripes',
   'Too many accessories before mastering the basics',
-]
-
-const starterSetup = [
-  '4–5 GPM pressure washer',
-  '16–21 inch surface cleaner',
-  '100–200 ft high pressure hose',
-  'Ball valve and quick connects',
-  'Downstream injector',
-  'J-rod / shooter tips',
-  'X-Jet kit / DS Twist',
-  'PPE and safety gear',
-  'Pump sprayer',
-  'Hose reel / storage upgrades',
 ]
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -581,7 +595,10 @@ export default function BeginnerSetupPage() {
             <p className="text-blue-200 text-sm leading-relaxed">
               <span className="font-semibold text-blue-300">Pro tip:</span> Don&apos;t buy
               everything at once. Buy the essentials, make money, then upgrade the stuff that
-              saves you time.
+              saves you time. Yes, it takes money to make money, but it also makes sense to
+              expand as you grow. Do not financially screw yourself over buying or financing a
+              giant setup before you have a client base, real understanding of the industry, or
+              the drive to actually stick with exterior cleaning.
             </p>
           </div>
         </div>
@@ -645,43 +662,6 @@ export default function BeginnerSetupPage() {
         </div>
       </section>
 
-      {/* Organization & Upgrades */}
-      <section className="bg-slate-900 py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-3">
-              Time-Savers
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Upgrades That Save Time on Every Job
-            </h2>
-            <p className="text-slate-400 max-w-xl mx-auto">
-              These aren&apos;t sexy but they add up fast. Every one of these makes your day
-              smoother once you&apos;re doing jobs regularly.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {organizeItems.map((item) => (
-              <a
-                key={item.title}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-slate-800 border border-slate-700/50 hover:border-blue-500/40 rounded-xl p-5 transition-all flex flex-col gap-3"
-              >
-                <span className="text-white font-semibold text-sm group-hover:text-blue-300 transition-colors">
-                  {item.title}
-                </span>
-                <span className="text-blue-400 text-xs font-medium">
-                  Check on Amazon →{' '}
-                  <span className="text-slate-500 font-normal">paid link</span>
-                </span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* What I Wouldn't Buy */}
       <section className="bg-slate-950 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -718,50 +698,6 @@ export default function BeginnerSetupPage() {
         </div>
       </section>
 
-      {/* Starter Package */}
-      <section id="starter-setup" className="bg-blue-700 py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-blue-200 text-sm font-semibold uppercase tracking-wider mb-3">
-              The Short List
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              My Recommended Starter Business Setup
-            </h2>
-            <p className="text-blue-100 mb-10">
-              If I had to hand someone a shopping list today, this is it. Buy these, learn the
-              basics, get your first jobs done, then upgrade.
-            </p>
-            <div className="bg-blue-800/60 border border-blue-500/30 rounded-xl p-8 mb-8 text-left">
-              <ul className="space-y-3">
-                {starterSetup.map((item) => (
-                  <li key={item} className="flex items-center gap-3">
-                    <svg
-                      className="w-5 h-5 text-blue-300 flex-shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-white font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <a
-              href="#buy-order"
-              className="inline-flex items-center gap-2 bg-white text-blue-700 hover:bg-blue-50 font-bold px-7 py-3.5 rounded-lg transition-colors text-sm"
-            >
-              Shop the Starter Setup
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <section className="bg-slate-950 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -794,12 +730,6 @@ export default function BeginnerSetupPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 border border-slate-600 hover:border-slate-400 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors text-sm"
-              >
-                Contact Max Pressure
-              </Link>
             </div>
           </div>
         </div>

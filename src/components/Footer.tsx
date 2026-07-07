@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 const products = [
   { href: '/trailer-builds', label: 'Trailer Builds' },
@@ -15,6 +18,9 @@ const company = [
 ]
 
 export default function Footer() {
+  const pathname = usePathname()
+  if (pathname === '/beginner-setup') return null
+
   return (
     <footer className="bg-slate-950 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
