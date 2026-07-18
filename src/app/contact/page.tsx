@@ -86,7 +86,7 @@ export default function ContactPage() {
               Request a Quote or Get in Touch
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed">
-              Fill out the form and we'll get back to you within 1 business day — no automated
+              Fill out the form and we&apos;ll get back to you within 1 business day — no automated
               responses, just a real answer from someone who knows pressure washing.
             </p>
           </div>

@@ -9,6 +9,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/trailer-builds', label: 'Trailer Builds' },
   { href: '/pressure-washers', label: 'Pressure Washers' },
+  { href: '/custom-pumps', label: 'Custom Pumps' },
   { href: '/surface-cleaners', label: 'Surface Cleaners' },
   { href: '/spray-guns', label: 'Spray Guns' },
   { href: '/contact', label: 'Contact' },

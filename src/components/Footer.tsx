@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 
 const products = [
   { href: '/trailer-builds', label: 'Trailer Builds' },
+  { href: '/custom-pumps', label: 'Custom Pumps' },
   { href: '/surface-cleaners', label: 'Surface Cleaners' },
   { href: '/spray-guns', label: 'Spray Guns' },
   { href: '/contact', label: 'Equipment Consulting' },

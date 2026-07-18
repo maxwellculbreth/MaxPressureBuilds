@@ -305,7 +305,7 @@ export default function TrailerBuildsPage() {
             Ready to Start Your Build?
           </h2>
           <p className="text-blue-100 mb-7 max-w-lg mx-auto">
-            Fill out the quote form, pick your package, tank size, and stain color — and we'll get
+            Fill out the quote form, pick your package, tank size, and stain color — and we&apos;ll get
             back to you with a custom quote.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
