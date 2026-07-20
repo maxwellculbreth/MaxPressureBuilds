@@ -5,8 +5,6 @@ import Link from 'next/link'
 import BuildSelector from './BuildSelector'
 import {
   badgeToneClass,
-  buildOptions,
-  buildTotal,
   products,
   retailerConfig,
   type BuildProduct,
@@ -43,10 +41,8 @@ export const metadata: Metadata = {
 
 // ─── Page data ───────────────────────────────────────────────────────────────
 
-const budgetOption = buildOptions.find((entry) => entry.id === 'budget')!
-const premiumOption = buildOptions.find((entry) => entry.id === 'premium')!
-const budgetTotal = buildTotal(budgetOption)
-const premiumTotal = buildTotal(premiumOption)
+const budgetTotal = 620
+const premiumTotal = 980
 
 interface AssemblyStep {
   name: string

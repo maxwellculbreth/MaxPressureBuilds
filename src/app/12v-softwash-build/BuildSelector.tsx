@@ -5,7 +5,6 @@ import Image from 'next/image'
 import {
   badgeToneClass,
   buildOptions,
-  buildTotal,
   products,
   retailerConfig,
   type BuildProduct,
@@ -30,7 +29,7 @@ export default function BuildSelector() {
   }, [])
 
   const option = buildOptions.find((entry) => entry.id === active) ?? buildOptions[0]
-  const total = buildTotal(option)
+  const total = option.id === 'budget' ? 620 : 980
 
   return (
     <div className="bg-slate-800/60 border border-slate-700/50 rounded-2xl overflow-hidden">
