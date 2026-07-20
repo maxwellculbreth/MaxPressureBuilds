@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 const products = [
   { href: '/trailer-builds', label: 'Trailer Builds' },
   { href: '/custom-pumps', label: 'Custom Pumps' },
+  { href: '/12v-softwash-build', label: '12V Soft Wash Build' },
   { href: '/surface-cleaners', label: 'Surface Cleaners' },
   { href: '/spray-guns', label: 'Spray Guns' },
   { href: '/contact', label: 'Equipment Consulting' },
@@ -20,7 +21,7 @@ const company = [
 
 export default function Footer() {
   const pathname = usePathname()
-  if (pathname === '/beginner-setup') return null
+  if (pathname === '/beginner-setup' || pathname === '/12v-softwash-build') return null
 
   return (
     <footer className="bg-slate-950 border-t border-slate-800">

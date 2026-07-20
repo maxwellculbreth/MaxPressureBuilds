@@ -19,7 +19,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
 
-  if (pathname === '/beginner-setup') return null
+  if (pathname === '/beginner-setup' || pathname === '/12v-softwash-build') return null
 
   return (
     <header className="bg-slate-950 border-b border-slate-800 sticky top-0 z-50">

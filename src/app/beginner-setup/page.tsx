@@ -1089,6 +1089,56 @@ export default function BeginnerSetupPage() {
         </div>
       </section>
 
+      {/* 12V Soft Wash Build CTA */}
+      <section className="bg-slate-900 py-16 md:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative rounded-2xl border border-cyan-500/40 bg-gradient-to-br from-cyan-950/50 via-slate-900 to-slate-900 overflow-hidden">
+            <div
+              className="absolute inset-0 pointer-events-none opacity-30"
+              style={{
+                backgroundImage:
+                  'radial-gradient(circle at 1px 1px, rgba(34,211,238,0.15) 1px, transparent 0)',
+                backgroundSize: '24px 24px',
+              }}
+              aria-hidden="true"
+            />
+            <div className="relative grid md:grid-cols-[1fr_220px] gap-8 items-center p-6 sm:p-8">
+              <div>
+                <p className="text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-2">
+                  Full DIY Build
+                </p>
+                <h2 className="text-white text-2xl sm:text-3xl font-bold leading-tight mb-3">
+                  Ready to Build a Dedicated Soft Wash System?
+                </h2>
+                <p className="text-slate-300 text-sm leading-relaxed mb-6 max-w-xl">
+                  See the complete 5–7 GPM 12V build, including the pump, tank, wiring, plumbing,
+                  reel, gun, quick-connects, and J-Rod.
+                </p>
+                <Link
+                  href="/12v-softwash-build"
+                  className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
+                >
+                  See the Full 12V Build
+                  <ArrowRightIcon />
+                </Link>
+              </div>
+              <div className="hidden md:block">
+                <div className="rounded-xl overflow-hidden border border-slate-700/40 bg-white p-4">
+                  <Image
+                    src="/media/12V-Softwash-Build/REMCO7GPM.png"
+                    alt="Remco 7 GPM 12V soft wash pump"
+                    width={1060}
+                    height={1053}
+                    sizes="220px"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What I Wouldn't Buy */}
       <section className="bg-slate-950 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
